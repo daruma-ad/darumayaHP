@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="駒川商店街で創業77年。だるまや呉服店は振袖・訪問着・七五三の着物販売・レンタルから、丸洗い・仕立て直しまで、着物のことなら何でもお任せください。">
+  <meta name="keywords" content="呉服店,着物,振袖,訪問着,七五三,袴,レンタル,丸洗い,仕立て直し,駒川,針中野,東住吉区,大阪">
+  <meta name="author" content="だるまや呉服店">
+
+  <!-- Open Graph / SNS -->
+  <meta property="og:title" content="だるまや呉服店 | 駒川で七十七年、着物の主治医">
+  <meta property="og:description" content="大阪・駒川商店街で77年。ご家族三世代のお付き合い。振袖・訪問着・七五三の販売・レンタルから着物のメンテナンスまで。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="images/hero.jpg">
+
+  <!-- Canonical URL - サイト公開後に実際のURLに変更してください -->
+  <!-- <link rel="canonical" href="https://www.example.com/"> -->
+
+  <title>だるまや呉服店 | 駒川で七十七年、着物の主治医</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ===========================
+       Header
+       =========================== -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/darumayan_parts.png" alt="だるまや呉服店" class="logo-image">
+        <div class="logo-text">
+          <h1>だるまや呉服店</h1>
+          <span>創業七十七年 駒川商店街</span>
+        </div>
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#about">当店について</a></li>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===========================
+       Hero Section
+       =========================== -->
+  <section class="hero" id="hero">
+    <div class="hero-background">
+      <img src="images/hero.jpg" alt="だるまや呉服店 店舗外観" width="1200" height="800">
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">創業七十七年 ― 三世代の絆</span>
+
+        <h2>駒川で七十七年。<br>ご家族の節目を、<br>一番近くで見守り続けたい。</h2>
+
+        <p class="hero-subtitle">
+          大阪・駒川商店街に根差して77年。<br>
+          成人式、七五三、卒業式…<br>
+          お客様ご家族の大切な節目を、三世代にわたってお手伝いしてまいりました。
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <span>来店予約・ご相談</span>
+          </a>
+          <a href="#services" class="btn btn-outline">
+            <span>サービスを見る</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       About Section (当店のこだわり)
+       =========================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>当店のこだわり</h2>
+        <p class="subtitle">七十七年、変わらぬ想い</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">🏪</div>
+          <h3>駒川の地で77年</h3>
+          <p>
+            1948年の創業以来、駒川商店街とともに歩んでまいりました。
+            地域の皆様に支えられ、今では三世代にわたってお付き合いいただいている
+            ご家族もいらっしゃいます。
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">👨‍👩‍👧‍👦</div>
+          <h3>三世代の絆</h3>
+          <p>
+            「おばあちゃんも、お母さんも、この店で着物を選んだのよ」—
+            こんな嬉しいお言葉をいただくことがあります。
+            世代を超えて、ご家族の想い出づくりをお手伝いしています。
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">💊</div>
+          <h3>着物の主治医</h3>
+          <p>
+            販売だけでなく、丸洗い、シミ抜き、仕立て直しまで一貫してお任せいただけます。
+            困ったときに頼れる「着物の主治医」として、永くお付き合いいたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Services Section
+       =========================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>サービスのご案内</h2>
+        <p class="subtitle">着物のことなら何でもご相談ください</p>
+      </div>
+
+      <!-- Service 1: 一生モノの出会い -->
+      <div class="service-item">
+        <div class="service-image">
+          <img src="images/service-furisode.jpg" alt="成人式の振袖" width="600" height="400" loading="lazy">
+        </div>
+        <div class="service-content">
+          <p class="lead">一生モノの出会い</p>
+          <h3>販売・レンタル</h3>
+          <p>
+            成人式の振袖から、結婚式の訪問着・留袖、お子様の七五三・卒業袴まで。
+            人生の大切な節目を彩る着物を、豊富なラインナップからお選びいただけます。
+            普段着の着物から、フォーマルな場面にふさわしい逸品まで取り揃えております。
+          </p>
+          <ul class="service-list">
+            <li>成人式振袖（販売・レンタル）</li>
+            <li>訪問着・留袖・色無地</li>
+            <li>七五三着物（男児・女児）</li>
+            <li>卒業式袴セット</li>
+            <li>浴衣・普段着着物</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 2: 想い出を繋ぐ -->
+      <div class="service-item">
+        <div class="service-image">
+          <img src="images/service-maintenance.png" alt="着物のメンテナンス" width="600" height="400" loading="lazy">
+        </div>
+        <div class="service-content">
+          <p class="lead">想い出を繋ぐ</p>
+          <h3>加工・メンテナンス</h3>
+          <p>
+            「お母様の振袖を娘様へ」—そんなご相談を多くいただきます。
+            熟練の職人による丸洗い、シミ抜き、仕立て直しで、
+            大切な着物を次の世代へつなげるお手伝いをいたします。
+            タンスに眠っている着物、ぜひ一度ご相談ください。
+          </p>
+          <ul class="service-list">
+            <li>着物の丸洗い・クリーニング</li>
+            <li>シミ抜き・汚れ落とし</li>
+            <li>寸法直し・仕立て直し</li>
+            <li>裏地交換・八掛替え</li>
+            <li>着物のお見立て・コーディネート相談</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Access Section
+       =========================== -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-title">
+        <h2>店舗情報・アクセス</h2>
+        <p class="subtitle">駒川商店街でお待ちしております</p>
+      </div>
+
+      <div class="access-grid">
+        <div class="access-info">
+          <div class="shop-brand">
+            <img src="images/darumayan_parts.png" alt="だるまや呉服店" class="logo-image">
+            <h3 class="shop-name">だるまや呉服店</h3>
+          </div>
+
+          <ul class="info-list">
+            <li>
+              <span class="info-label">所在地</span>
+              <span class="info-value">
+                〒546-0043<br>
+                大阪府大阪市東住吉区駒川5-8-8<br>
+                （駒川商店街内 みなみ通り商店会）
+              </span>
+            </li>
+            <li>
+              <span class="info-label">電話番号</span>
+              <span class="info-value">
+                <a href="tel:06-6692-2239" style="color: white; font-size: 1.25rem;">
+                  06-6692-2239
+                </a>
+              </span>
+            </li>
+            <li>
+              <span class="info-label">営業時間</span>
+              <span class="info-value">10:00 〜 19:00</span>
+            </li>
+          </ul>
+
+          <div class="access-route">
+            <h4>🚃 アクセス方法</h4>
+            <ul>
+              <li>近鉄南大阪線「針中野駅」より徒歩2分</li>
+              <li>大阪メトロ谷町線「駒川中野駅」より徒歩5分</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=だるまや呉服店%20大阪府大阪市東住吉区駒川5-8-8&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="だるまや呉服店の地図">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Contact Section
+       =========================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>お問い合わせ・来店予約</h2>
+        <p class="subtitle">お気軽にご相談ください</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>お電話でのお問い合わせ</h3>
+          <p>
+            着物のことなら何でもお気軽にご相談ください。
+            来店のご予約もお電話にて承っております。
+          </p>
+          <div class="contact-phone">
+            <a href="tel:06-6692-2239" style="color: white;">06-6692-2239</a>
+          </div>
+          <p class="contact-hours">
+            営業時間：10:00 〜 19:00
+          </p>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前<span class="required">必須</span></label>
+              <input type="text" id="name" name="name" placeholder="山田 花子" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">電話番号<span class="required">必須</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="090-1234-5678" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry-type">お問い合わせ種別<span class="required">必須</span></label>
+            <select id="inquiry-type" name="inquiry-type" required>
+              <option value="">選択してください</option>
+              <option value="visit">来店予約</option>
+              <option value="furisode">成人式振袖について</option>
+              <option value="shichigosan">七五三について</option>
+              <option value="hakama">卒業袴について</option>
+              <option value="rental">着物レンタルについて</option>
+              <option value="maintenance">丸洗い・仕立て直しについて</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" placeholder="ご相談内容やご希望の来店日時などをご記入ください"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">送信する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Footer
+       =========================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>だるまや呉服店</h3>
+          <p>
+            駒川商店街で創業77年。振袖・訪問着・七五三のレンタル・販売から、
+            着物の丸洗い・仕立て直しまで、着物のことなら何でもお任せください。
+            三世代にわたって、ご家族の大切な節目をお手伝いしています。
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>メニュー</h4>
+          <ul>
+            <li><a href="#about">当店について</a></li>
+            <li><a href="#services">サービス</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>サービス</h4>
+          <ul>
+            <li><a href="#services">成人式振袖</a></li>
+            <li><a href="#services">七五三</a></li>
+            <li><a href="#services">卒業袴</a></li>
+            <li><a href="#services">着物メンテナンス</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 だるまや呉服店 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          document.getElementById('nav-menu').classList.remove('active');
+        }
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+      }
+    });
+
+    // Form submission handler for Formspree
+    const form = document.getElementById('contact-form');
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      const status = document.getElementById("contact-form-status");
+      const data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert("お問い合わせありがとうございます！\nメッセージは正常に送信されました。");
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert("送信中にエラーが発生しました。もう一度お試しください。");
+            }
+          })
+        }
+      }).catch(error => {
+        alert("送信中にエラーが発生しました。");
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+  </script>
+</body>
+
+</html>
