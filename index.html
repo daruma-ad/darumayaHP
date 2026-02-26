@@ -425,6 +425,50 @@
 
     form.addEventListener("submit", handleSubmit);
   </script>
+
+  <!-- ===========================
+       Chatbot Integration
+       =========================== -->
+  <!-- CSS reference -->
+  <link rel="stylesheet" href="chatbot.css">
+
+  <!-- Chatbot HTML Structure -->
+  <!-- Chat Toggle Button -->
+  <button id="chatToggle" class="chat-toggle" aria-label="チャットを開く">
+    <div id="chatToggleIcon" class="chat-toggle-icon">
+      <span class="icon-chat">💬</span>
+      <span class="icon-close" style="display: none;">✕</span>
+    </div>
+    <span id="chatBadge" class="chat-badge hidden">1</span>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="chatWindow" class="chat-window">
+    <div class="chat-header">
+      <h2>だるまや チャット相談</h2>
+      <button id="chatClose" class="chat-close" aria-label="閉じる">✕</button>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+      <!-- Messages will be injected by chatbot.js -->
+    </div>
+
+    <div id="quickActions" class="chat-quick-actions">
+      <!-- Quick actions will be injected by chatbot.js -->
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" class="chat-input" placeholder="メッセージを入力...">
+      <button id="chatSend" class="chat-send">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- JS reference -->
+  <script src="chatbot.js"></script>
 </body>
 
 </html>
