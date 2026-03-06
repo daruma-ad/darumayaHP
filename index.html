@@ -99,6 +99,7 @@
 
       <div class="news-grid">
         <!-- Card 1: 振袖キャンペーン -->
+        <!-- Card 1: 振袖キャンペーン -->
         <a href="pages/campaign-furisode-2026.html" class="news-card">
           <div class="news-card-image">
             <img src="images/campaign-furisode.png" alt="成人式振袖 早期予約キャンペーン" width="600" height="400" loading="lazy">
@@ -448,6 +449,18 @@
         header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
       }
     });
+
+    // --- News Section Limit ---
+    // 有効な（.is-hidden でない）カードのうち、最初の3つだけを表示する
+    const limitNewsCards = () => {
+      const newsCards = document.querySelectorAll('.news-grid .news-card:not(.is-hidden)');
+      newsCards.forEach((card, index) => {
+        if (index >= 3) {
+          card.style.display = 'none';
+        }
+      });
+    };
+    limitNewsCards();
 
     // Form submission handler for Formspree
     const form = document.getElementById('contact-form');

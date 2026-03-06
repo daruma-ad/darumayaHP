@@ -834,6 +834,10 @@ nav a:hover {
   display: block;
 }
 
+.news-card.is-hidden {
+  display: none !important;
+}
+
 .news-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
