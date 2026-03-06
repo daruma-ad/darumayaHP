@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="だるまや呉服店の成人式振袖レンタルプラン。49,800円からのシンプルプランから、ぜんぶ無料のフルセットまで、分かりやすい3つのプランをご用意しています。">
+    <title>成人式振袖レンタル 3大プラン | だるまや呉服店</title>
+    <link rel="stylesheet" href="../pages.css">
+    <style>
+        /* 画像貼り付け型LP専用の調整スタイル */
+        .image-lp-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding-top: 64px;
+            /* LP topbarの高さ分を下げる */
+            padding-bottom: 120px;
+            /* CTAボタンが被らないように余白を作る */
+        }
+
+        .image-lp-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 追従型CTA（フローティングアクションボタン） */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            animation: bounce 2s infinite;
+        }
+
+        .floating-cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--color-accent), #a03030);
+            color: white;
+            padding: 18px 20px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(142, 35, 35, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .floating-cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(142, 35, 35, 0.5);
+            color: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* スマホ向けの微調整 */
+        @media (max-width: 768px) {
+            .image-lp-container {
+                padding-top: 55px;
+            }
+
+            .floating-cta-btn {
+                font-size: 1rem;
+                padding: 15px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: #f8f6f2;">
+    <!-- Top Bar -->
+    <header class="lp-topbar">
+        <div class="container">
+            <a href="../index.html" class="lp-topbar-logo">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span>だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-topbar-back">トップへ戻る</a>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ（画像スタック） -->
+    <main class="image-lp-container">
+        <!-- 1枚目: シンプルプラン -->
+        <img src="../images/furisode-plan-1.jpg" alt="振袖フルセット最安 シンプルプラン 価格は49,800円より">
+
+        <!-- 2枚目: 写真パック -->
+        <img src="../images/furisode-plan-2.jpg" alt="二十歳の今を、写真に残す。すべて込みの安心価格 29,800円" loading="lazy">
+
+        <!-- 3枚目: フルセットパック -->
+        <img src="../images/furisode-plan-3.jpg" alt="前撮りも当日もぜんぶ無料！振袖レンタル一式 148,000円〜" loading="lazy">
+    </main>
+
+    <!-- 追従型CTA -->
+    <div class="floating-cta">
+        <a href="../index.html#contact" class="floating-cta-btn">
+            👇 まずは無料試着・ご相談から
+        </a>
+    </div>
+
+</body>
+
+</html>
