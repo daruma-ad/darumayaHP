@@ -4,20 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="だるまや呉服店の成人式振袖レンタルプラン。49,800円からのシンプルプランから、ぜんぶ無料のフルセットまで、分かりやすい3つのプランをご用意しています。">
-    <title>成人式振袖レンタル 3大プラン | だるまや呉服店</title>
+    <meta name="description"
+        content="だるまや呉服店の成人式振袖レンタルプラン。49,800円からのシンプルプランから、前撮り・当日ぜんぶ無料のフルセットまで。大阪・駒川商店街で創業77年の老舗呉服店。">
+    <meta name="keywords" content="振袖,レンタル,成人式,大阪,駒川,東住吉,前撮り,着付け,呉服店,だるまや">
+    <title>成人式振袖レンタル 3大プラン | だるまや呉服店 大阪・駒川商店街</title>
     <link rel="stylesheet" href="../pages.css">
+
+    <!-- FAQ構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "振袖は何着から選べますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "常時200着以上をご用意しております。古典柄からモダンなデザインまで幅広いコレクションをご覧いただけます。新作も随時入荷しておりますので、お気軽にご来店ください。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "前撮りはいつ頃がおすすめですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "春（4〜5月）や秋（9〜11月）が人気のシーズンです。気候が穏やかで屋外ロケーションでの撮影にも適しています。成人式の1年前から半年前のご予約をおすすめしています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "キャンセル料はかかりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ご試着・ご来店でのご相談は無料です。レンタルご成約後のキャンセルについては、時期に応じたキャンセル料が発生する場合がございます。詳しくはスタッフまでお問い合わせください。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "母の振袖を持ち込んでコーディネートできますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、ママ振り（お母様の振袖）のコーディネートも大歓迎です。帯や小物を変えるだけで、お母様の振袖が今風のスタイルに生まれ変わります。サイズ直しや染み抜きのご相談も承っております。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
-        /* 画像貼り付け型LP専用の調整スタイル */
+        /* 画像＋テキスト ハイブリッド型LP */
         .image-lp-container {
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
             background: #fff;
             padding-top: 64px;
-            /* LP topbarの高さ分を下げる */
             padding-bottom: 20px;
-            /* CTAボタンが被らないように余白を作る */
         }
 
         .image-lp-container img {
@@ -26,7 +69,176 @@
             display: block;
         }
 
-        /* 追従型CTA（フローティングアクションボタン） */
+        /* テキスト補足セクション */
+        .plan-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px 30px;
+        }
+
+        .plan-detail h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: var(--color-navy);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--color-gold);
+            display: inline-block;
+        }
+
+        .plan-detail h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            margin: 25px 0 10px;
+        }
+
+        .plan-detail p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        .plan-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .plan-detail li {
+            padding: 8px 0;
+            font-size: 0.93rem;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .plan-detail li::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--color-gold-light);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.65rem;
+            flex-shrink: 0;
+        }
+
+        .plan-detail .recommend-tag {
+            display: inline-block;
+            background: rgba(142, 35, 35, 0.08);
+            color: var(--color-accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+
+        /* FAQ セクション */
+        .faq-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #f8f6f2 0%, #fff 100%);
+            padding: 60px 30px;
+        }
+
+        .faq-section h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: var(--color-navy);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 22px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-item dt {
+            font-weight: 600;
+            color: var(--color-navy);
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-item dt::before {
+            content: 'Q';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            height: 28px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .faq-item dd {
+            margin: 0;
+            padding-left: 38px;
+            font-size: 0.93rem;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        /* 店舗情報 */
+        .shop-info {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .shop-info h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-navy);
+            margin-bottom: 25px;
+        }
+
+        .shop-info table {
+            margin: 0 auto;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        .shop-info th,
+        .shop-info td {
+            padding: 10px 15px;
+            font-size: 0.93rem;
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .shop-info th {
+            color: var(--color-text-light);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* 追従CTA */
         .floating-cta {
             position: fixed;
             bottom: 20px;
@@ -81,7 +293,6 @@
             }
         }
 
-        /* スマホ向けの微調整 */
         @media (max-width: 768px) {
             .image-lp-container {
                 padding-top: 55px;
@@ -90,6 +301,12 @@
             .floating-cta-btn {
                 font-size: 1rem;
                 padding: 15px 15px;
+            }
+
+            .plan-detail,
+            .faq-section,
+            .shop-info {
+                padding: 35px 20px;
             }
         }
     </style>
@@ -107,17 +324,158 @@
         </div>
     </header>
 
-    <!-- メインコンテンツ（画像スタック） -->
+    <!-- ============================================
+         プラン1: シンプルプラン
+         ============================================ -->
     <main class="image-lp-container">
-        <!-- 1枚目: シンプルプラン -->
         <img src="../images/furisode-plan-1.jpg" alt="振袖フルセット最安 シンプルプラン 価格は49,800円より">
-
-        <!-- 2枚目: 写真パック -->
-        <img src="../images/furisode-plan-2.jpg" alt="二十歳の今を、写真に残す。すべて込みの安心価格 29,800円" loading="lazy">
-
-        <!-- 3枚目: フルセットパック -->
-        <img src="../images/furisode-plan-3.jpg" alt="前撮りも当日もぜんぶ無料！振袖レンタル一式 148,000円〜" loading="lazy">
     </main>
+
+    <section class="plan-detail">
+        <h2>シンプルプラン ── 49,800円より</h2>
+        <p>
+            「まずは振袖だけ選びたい」「必要なものだけを自分で組み合わせたい」という方にぴったりの、だるまや最安プランです。
+            初めての振袖選びでも、ベテランスタッフが丁寧にサポートいたしますのでご安心ください。
+        </p>
+
+        <h3>プランに含まれるもの</h3>
+        <ul>
+            <li>振袖衣装代（レンタル）</li>
+        </ul>
+
+        <h3>選べるオプション</h3>
+        <ul>
+            <li>成人式当日お支度（ヘアセット・メイク・着付け） ── ¥20,000</li>
+            <li>前撮りプラン（前撮りヘアセット・メイク・着付け・写真撮影・見開きアルバム＋写真データ付き） ── ¥25,000</li>
+        </ul>
+
+        <p class="recommend-tag">💡 とにかく費用を抑えたい方・自分に必要なものだけを組み合わせたい方におすすめ</p>
+    </section>
+
+    <!-- ============================================
+         プラン2: 写真パック
+         ============================================ -->
+    <div class="image-lp-container" style="padding-top: 0;">
+        <img src="../images/furisode-plan-2.jpg" alt="二十歳の今を、写真に残す。すべて込みの安心価格 29,800円" loading="lazy">
+    </div>
+
+    <section class="plan-detail">
+        <h2>写真パック ── 29,800円（税込）</h2>
+        <p>
+            「成人式には出ないけど、二十歳の記念に写真だけは残したい。」そんなお嬢様にぴったりのプランです。
+            振袖からヘアメイク、撮影、アルバムまですべてセットの安心価格。追加で+20,000円をお支払いいただくと、振袖のまま街歩きや神社への参拝もお楽しみいただけます。
+        </p>
+
+        <h3>プランに含まれるもの</h3>
+        <ul>
+            <li>振袖衣装代（レンタル）</li>
+            <li>ヘアセット・メイク</li>
+            <li>着付け</li>
+            <li>写真撮影（スタジオ撮影）</li>
+            <li>2ポーズ見開きアルバム</li>
+            <li>撮影データ付き</li>
+        </ul>
+
+        <p class="recommend-tag">📸 準備いらずで安心・写真だけでなく思い出も残せる・ご家族とのお出かけにも</p>
+    </section>
+
+    <!-- ============================================
+         プラン3: フルセット
+         ============================================ -->
+    <div class="image-lp-container" style="padding-top: 0;">
+        <img src="../images/furisode-plan-3.jpg" alt="前撮りも当日もぜんぶ無料！振袖レンタル一式 148,000円〜" loading="lazy">
+    </div>
+
+    <section class="plan-detail">
+        <h2>フルセットプラン ── 148,000円（税込）〜</h2>
+        <p>
+            「前撮りも成人式当日も、ぜんぶお任せしたい。追加料金なしで安心したい。」
+            そんな方のための、だるまや自慢のオールインワンプランです。
+            振袖レンタルから前撮り撮影、成人式当日の着付け・ヘアメイクまで、ぜ〜んぶ無料。追加料金は一切かかりません。
+        </p>
+
+        <h3>追加0円！安心のフルセット内容</h3>
+        <ul>
+            <li>振袖（200着以上からお選びいただけます）</li>
+            <li>帯</li>
+            <li>長襦袢</li>
+            <li>小物一式</li>
+            <li>草履</li>
+            <li>バッグ</li>
+            <li>ショール</li>
+        </ul>
+
+        <h3>前撮りも当日も、まるごと無料サポート</h3>
+        <ul>
+            <li>前撮り：撮影・ヘアメイク・着付け＋記念アルバム付き</li>
+            <li>式当日：ヘアセット・メイク・着付け</li>
+        </ul>
+
+        <p>前撮りも成人式も、どちらも無料。迷う必要はありません。一生に一度の記念日を、最高のクオリティでプロデュースします。</p>
+        <p class="recommend-tag">👑 追加料金を気にせず、すべてをお任せしたい方に最もおすすめのプラン</p>
+    </section>
+
+    <!-- ============================================
+         よくある質問 (FAQ)
+         ============================================ -->
+    <section class="faq-section">
+        <h2>よくある質問</h2>
+
+        <dl>
+            <div class="faq-item">
+                <dt>振袖は何着から選べますか？</dt>
+                <dd>常時200着以上をご用意しております。古典柄からモダンなデザインまで幅広いコレクションをご覧いただけます。新作も随時入荷しておりますので、お気軽にご来店ください。</dd>
+            </div>
+
+            <div class="faq-item">
+                <dt>前撮りはいつ頃がおすすめですか？</dt>
+                <dd>春（4〜5月）や秋（9〜11月）が人気のシーズンです。気候が穏やかで屋外ロケーションでの撮影にも適しています。成人式の1年前から半年前のご予約をおすすめしています。</dd>
+            </div>
+
+            <div class="faq-item">
+                <dt>キャンセル料はかかりますか？</dt>
+                <dd>ご試着・ご来店でのご相談は無料です。レンタルご成約後のキャンセルについては、時期に応じたキャンセル料が発生する場合がございます。詳しくはスタッフまでお問い合わせください。</dd>
+            </div>
+
+            <div class="faq-item">
+                <dt>母の振袖を持ち込んでコーディネートできますか？</dt>
+                <dd>はい、ママ振り（お母様の振袖）のコーディネートも大歓迎です。帯や小物を変えるだけで、お母様の振袖が今風のスタイルに生まれ変わります。サイズ直しや染み抜きのご相談も承っております。</dd>
+            </div>
+        </dl>
+    </section>
+
+    <!-- ============================================
+         店舗情報
+         ============================================ -->
+    <section class="shop-info">
+        <h2>店舗情報・アクセス</h2>
+        <table>
+            <tr>
+                <th>店名</th>
+                <td>だるまや呉服店</td>
+            </tr>
+            <tr>
+                <th>所在地</th>
+                <td>〒546-0043 大阪市東住吉区駒川5-8-8</td>
+            </tr>
+            <tr>
+                <th>電話</th>
+                <td><a href="tel:06-6692-2239">06-6692-2239</a></td>
+            </tr>
+            <tr>
+                <th>営業時間</th>
+                <td>10:00〜19:00</td>
+            </tr>
+            <tr>
+                <th>定休日</th>
+                <td>水曜日</td>
+            </tr>
+            <tr>
+                <th>アクセス</th>
+                <td>近鉄南大阪線「針中野」駅より徒歩3分<br>地下鉄谷町線「駒川中野」駅より徒歩5分</td>
+            </tr>
+        </table>
+    </section>
 
     <!-- LINE・Instagram リンク -->
     <div style="max-width: 1000px; margin: 0 auto; background: #fff; text-align: center; padding: 40px 20px 140px;">
