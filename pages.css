@@ -737,12 +737,118 @@ a:hover {
     }
 }
 
-@media (max-width: 380px) {
-    .lp-hero-content h1 {
-        font-size: 1.3rem;
-    }
-
-    .lp-topbar-logo span {
-        display: none;
-    }
+/* ===========================
+   Summer Campaign Specific Styles
+   =========================== */
+.summer-theme {
+    --color-summer-blue: #2A4A6A;
+    --color-summer-aqua: #E0F2F1;
+    --color-summer-ice: #F0FBFF;
 }
+
+.lp-hero.summer {
+    background-color: #f0f8ff; /* 念のための背景色（画像が読み込まれるまでの待機色） */
+}
+
+.lp-hero.summer .lp-hero-bg {
+    z-index: 0; /* 画像コンテナを前面へ */
+}
+
+.lp-hero.summer .lp-hero-content {
+    z-index: 1; /* コンテンツはさらに前面へ */
+}
+
+.lp-hero.summer .lp-hero-bg img {
+    filter: brightness(0.8) saturate(1.1); /* 少し暗くして白い文字を際立たせる */
+    display: block;
+}
+
+.lp-hero.summer .lp-hero-badge.campaign {
+    background: rgba(42, 74, 106, 0.85); /* Navy blue for summer contrast */
+}
+
+.lp-hero.summer .lp-hero-content h1,
+.lp-hero.summer .lp-hero-content .lp-hero-subtitle {
+    color: #ffffff; /* 純白に変更 */
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6), 0 2px 10px rgba(0, 0, 0, 0.4); /* 影を強くして視認性を確保 */
+}
+
+.lp-hero.summer .lp-hero-period {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+
+/* Gift Card Style */
+.lp-gift-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(42, 74, 106, 0.1);
+    margin: 40px 0;
+    border: 1px solid var(--color-summer-aqua);
+}
+
+.lp-gift-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lp-gift-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-navy);
+    margin-bottom: 15px;
+}
+
+.lp-gift-text .gift-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--color-gold);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.lp-gift-text p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.lp-highlight-box {
+    background: var(--color-summer-aqua);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.lp-highlight-box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.lp-highlight-box p {
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+@media (max-width: 768px) {
+    .lp-gift-card {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 24px;
+    }
+}
