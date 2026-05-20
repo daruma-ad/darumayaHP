@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GWに振袖を決めきれなかったお嬢様へ。5月23日から5月31日まで、着物専門店だるまやで初夏の振袖・ママ振 大相談会を開催。">
+    <title>初夏の振袖・ママ振 大相談会 | だるまや呉服店</title>
+    <link rel="stylesheet" href="../pages.css">
+    <style>
+        /* 追加のカスタムスタイル (カルーセルなど) */
+        .carousel-strip {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-strip img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            scroll-snap-align: start;
+        }
+        .carousel-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel-strip::-webkit-scrollbar-thumb {
+            background-color: var(--color-gold);
+            border-radius: 4px;
+        }
+        .custom-check-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .custom-check-list li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .custom-check-list li::before {
+            content: "✓";
+            color: var(--color-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .faq-details {
+            background: white;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+        .faq-details summary {
+            font-weight: bold;
+            color: var(--color-navy);
+            outline: none;
+        }
+        .faq-details p {
+            margin-top: 10px;
+            color: var(--color-text);
+        }
+    </style>
+    <style>
+        .lp-hero {
+            min-height: 88vh;
+            background: #101820;
+        }
+        .lp-hero-bg {
+            left: auto;
+            width: min(38vw, 440px);
+            aspect-ratio: 4 / 5;
+            right: max(24px, calc((100vw - 1200px) / 2));
+            top: 90px;
+            bottom: auto;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+        }
+        .lp-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #111;
+            filter: none;
+        }
+        .lp-hero-bg::after {
+            display: none;
+        }
+        .lp-hero-content {
+            width: min(1200px, 100%);
+            text-align: left;
+            padding-right: min(46vw, 540px);
+        }
+        .lp-hero-content .lp-hero-subtitle {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .lp-detail-block {
+            grid-template-columns: minmax(280px, 440px) minmax(0, 1fr);
+            gap: clamp(28px, 5vw, 70px);
+        }
+        .lp-detail-block.reverse {
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+        }
+        .lp-detail-image {
+            background: #fff;
+            border-radius: 14px;
+        }
+        .lp-detail-image img,
+        .lp-feature-card > img {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 5;
+            object-fit: contain !important;
+            background: #fff;
+        }
+        .lp-feature-card > img {
+            border-radius: 12px !important;
+            margin-bottom: 20px !important;
+        }
+        #benefits .lp-detail-block {
+            display: block;
+        }
+        #benefits .lp-detail-image {
+            max-width: 560px !important;
+        }
+        .carousel-strip {
+            gap: 18px;
+            padding: 20px 4px 28px;
+        }
+        .carousel-strip img {
+            flex: 0 0 min(78vw, 360px);
+            width: min(78vw, 360px);
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+        }
+        @media (max-width: 900px) {
+            .lp-hero {
+                display: block;
+                padding: 84px 16px 42px;
+            }
+            .lp-hero-bg {
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                width: min(100%, 430px);
+                height: auto;
+                aspect-ratio: 4 / 5;
+                margin: 0 auto 28px;
+                z-index: 0;
+            }
+            .lp-hero-content {
+                padding: 0;
+                text-align: center;
+            }
+            .lp-hero-content .lp-hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .lp-detail-block,
+            .lp-detail-block.reverse {
+                grid-template-columns: 1fr;
+            }
+            .lp-detail-image {
+                max-width: 430px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="lp-topbar">
+        <div class="container">
+            <a href="../index.html" class="lp-topbar-logo">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span>だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-topbar-back">トップへ戻る</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="lp-hero">
+        <div class="lp-hero-bg">
+            <img src="../images/IG/1.png" alt="赤い振袖を着た女性の後ろ姿と初夏の振袖相談会の告知">
+        </div>
+        <div class="lp-hero-content">
+            <span class="lp-hero-badge campaign">2026年5月23日(土) - 5月31日(日) 9日間限定</span>
+            <h1>GWに振袖を<br>決めきれなかった<br>お嬢様へ</h1>
+            <p class="lp-hero-subtitle">
+                まだ間に合う、初夏の振袖・ママ振 大相談会。<br>比較検討も、見るだけのご相談も歓迎です。
+            </p>
+            <div style="margin-top: 30px;">
+                <a href="#reserve" class="lp-btn lp-btn-white" style="margin-right: 15px; margin-bottom: 15px;">無料でWEB来店予約</a>
+                <a href="#gallery" class="lp-btn lp-btn-outline">カルーセル画像を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="lp-section" id="intro">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>焦って決める前に、専門店で一度ご相談ください。</h2>
+                <p>GW後の振袖迷子さんへ</p>
+            </div>
+            <p style="text-align:center; max-width:800px; margin:0 auto; font-size: 1.1rem;">大型店ではピンとこなかった方、部活や予定でGWに見に行けなかった方、ママ振のサイズや汚れが不安な方へ。だるまやはご家族でゆっくり選べる個店ならではの相談会を用意しました。</p>
+        </div>
+    </section>
+
+    <!-- Worries & Compare -->
+    <section class="lp-section alt-bg" id="worries">
+        <div class="container">
+            <div class="lp-detail-block">
+                <div class="lp-detail-image">
+                    <img src="../images/IG/2.png" alt="母娘が振袖について相談しているカルーセル画像">
+                </div>
+                <div class="lp-detail-text">
+                    <p style="color: var(--color-accent); font-weight: bold; margin-bottom: 5px;">こんなお悩みありませんか？</p>
+                    <h3 style="font-size: 1.8rem;">ひとつでも当てはまったら、だるまやへ。</h3>
+                    <ul class="custom-check-list" style="margin-top: 20px; font-size: 1.1rem;">
+                        <li>GWは忙しくて振袖を見に行けなかった</li>
+                        <li>大型店では他の人とかぶりそうで決めきれなかった</li>
+                        <li>ママ振のサイズ直しやシミが不安</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lp-detail-block reverse" style="margin-top: 60px;">
+                <div class="lp-detail-image">
+                    <img src="../images/IG/3.png" alt="着物専門店の落ち着いた試着空間を伝えるカルーセル画像">
+                </div>
+                <div class="lp-detail-text">
+                    <p style="color: var(--color-accent); font-weight: bold; margin-bottom: 5px;">見るだけ・比較だけでも大歓迎</p>
+                    <h3 style="font-size: 1.8rem;">他店を見た後でも大丈夫です。</h3>
+                    <p>一生に一度の晴れ姿だから、納得できるまで比べて選んでください。だるまやでは大手チェーン店のような混雑感を抑え、ご家族でじっくり相談できる時間を大切にしています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="lp-section" id="benefits">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>相談会だけの3大特典</h2>
+                <p>5月下旬限定</p>
+            </div>
+            
+            <div class="lp-detail-block" style="margin-bottom: 40px;">
+                <div class="lp-detail-image" style="width: 100%; max-width: 500px; margin: 0 auto;">
+                    <img src="../images/IG/4.png" alt="5月下旬限定3大特典を紹介するカルーセル画像" style="height: auto;">
+                </div>
+            </div>
+
+            <div class="lp-feature-grid">
+                <div class="lp-feature-card">
+                    <div class="lp-feature-icon">🎟️</div>
+                    <span style="color: var(--color-accent); font-weight: bold; font-size: 0.9rem;">特典 1</span>
+                    <h3>WEB予約で<br>5,000円OFF</h3>
+                    <p>5万円以上のレンタル・ご購入で使えるチケットをプレゼント。</p>
+                </div>
+                <div class="lp-feature-card">
+                    <div class="lp-feature-icon">🎁</div>
+                    <span style="color: var(--color-accent); font-weight: bold; font-size: 0.9rem;">特典 2</span>
+                    <h3>浴衣 or 髪飾り<br>プレゼント</h3>
+                    <p>ご成約の方に、晴れ姿を彩る特典をご用意しています。</p>
+                </div>
+                <div class="lp-feature-card">
+                    <div class="lp-feature-icon">👘</div>
+                    <span style="color: var(--color-accent); font-weight: bold; font-size: 0.9rem;">特典 3</span>
+                    <h3>ママ振チェック<br>無料</h3>
+                    <p>状態チェックと最新コーデ診断を、専門店の目線で行います。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason -->
+    <section class="lp-section alt-bg" id="reason">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>専門店だからできる、振袖選びの整え方。</h2>
+                <p>だるまやが最後の決め手になる理由</p>
+            </div>
+            <div class="lp-feature-grid">
+                <div class="lp-feature-card" style="padding: 20px;">
+                    <img src="../images/IG/5.png" alt="帯や小物で印象が変わるコーディネート力を伝える画像" style="border-radius: 10px; margin-bottom: 20px; height: 250px; width: 100%; object-fit: cover;">
+                    <h3>量産型にならない<br>コーディネート力</h3>
+                    <p>帯や小物の合わせ方で、同じ振袖でも印象は大きく変わります。お嬢様らしさを引き出す一着へ。</p>
+                </div>
+                <div class="lp-feature-card" style="padding: 20px;">
+                    <img src="../images/IG/6.png" alt="ママ振を今っぽく蘇らせる相談会の画像" style="border-radius: 10px; margin-bottom: 20px; height: 250px; width: 100%; object-fit: cover;">
+                    <h3>ママ振が<br>今っぽく蘇る</h3>
+                    <p>サイズ直し、シミ抜き、小物アレンジまで相談できます。他店で断られたお着物もまずはお持ちください。</p>
+                </div>
+                <div class="lp-feature-card" style="padding: 20px;">
+                    <img src="../images/IG/7.png" alt="だるまやへのWEB来店予約を促すカルーセル画像" style="border-radius: 10px; margin-bottom: 20px; height: 250px; width: 100%; object-fit: cover;">
+                    <h3>ご家族で相談しやすい<br>個店の空間</h3>
+                    <p>落ち着いた空間で、時間を気にせず振袖選びを。比較検討中の方も歓迎です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="lp-section" id="gallery">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>カルーセル画像で相談会の内容を確認</h2>
+                <p>Instagram carousel</p>
+            </div>
+            <div class="carousel-strip" aria-label="カルーセル画像一覧">
+                <img src="../images/IG/1.png" alt="カルーセル1枚目">
+                <img src="../images/IG/2.png" alt="カルーセル2枚目">
+                <img src="../images/IG/3.png" alt="カルーセル3枚目">
+                <img src="../images/IG/4.png" alt="カルーセル4枚目">
+                <img src="../images/IG/5.png" alt="カルーセル5枚目">
+                <img src="../images/IG/6.png" alt="カルーセル6枚目">
+                <img src="../images/IG/7.png" alt="カルーセル7枚目">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="lp-section alt-bg" id="faq">
+        <div class="container" style="max-width: 800px;">
+            <div class="lp-section-title">
+                <h2>よくある質問</h2>
+                <p>FAQ</p>
+            </div>
+            <details class="faq-details">
+                <summary>他店を見た後でも、見るだけでもいいですか？</summary>
+                <p>もちろんです。比較検討のためにご来店される方も多くいらっしゃいます。</p>
+            </details>
+            <details class="faq-details">
+                <summary>ママ振の小物が1点だけ足りない場合も相談できますか？</summary>
+                <p>帯締め1本、重ね衿1枚からのレンタル・購入も歓迎です。</p>
+            </details>
+            <details class="faq-details">
+                <summary>状態が悪い着物でも持って行って大丈夫ですか？</summary>
+                <p>まずはお持ちください。サイズ、シミ、コーディネートの可能性を確認します。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA / Reserve -->
+    <section class="lp-cta" id="reserve">
+        <div class="container">
+            <p style="font-weight: bold; margin-bottom: 10px;">9日間限定</p>
+            <h2>初夏の振袖・ママ振 大相談会</h2>
+            <p>
+                2026年5月23日(土)〜5月31日(日)。<br>
+                ご家族でゆっくり試着できるよう、WEB来店予約をご利用ください。
+            </p>
+            <div class="lp-cta-buttons">
+                <a href="https://example.com/reserve" class="lp-btn lp-btn-white" style="font-size: 1.1rem; padding: 18px 50px;">
+                    【無料】WEB来店予約
+                </a>
+            </div>
+            <p style="font-size: 0.85rem; margin-top: 20px; opacity: 0.7;">予約リンクは公開時に実際の予約URLへ差し替えてください。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+        <div class="container">
+            <p>&copy; 2026 だるまや呉服店 All Rights Reserved. ｜ <a href="../index.html">トップページへ戻る</a></p>
+        </div>
+    </footer>
+</body>
+</html>
