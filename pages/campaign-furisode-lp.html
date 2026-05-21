@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GWに振袖を決めきれなかったお嬢様へ。5月23日〜31日の9日間限定、だるまや呉服店にて「初夏の振袖・ママ振 大相談会」開催。お持ち込みのママ振相談やお得な3大特典も。">
+    <title>【9日間限定】初夏の振袖・ママ振 大相談会 | だるまや呉服店</title>
+    
+    <!-- Google Fonts: Shippori Mincho & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- プレミアム和モダン デザインシステム --- */
+        :root {
+            --color-navy: #0E1A2F;      /* 深い群青 */
+            --color-gold-light: #F4EAD4;/* 柔らかな金砂 */
+            --color-gold: #C5A059;      /* 優雅な金 */
+            --color-gold-dark: #9A7736; /* 落ち着いた金 */
+            --color-text: #2C2C2C;      /* 墨黒 */
+            --color-bg-light: #FDFCF9;  /* 生成り（和紙の質感） */
+            --color-accent: #C23A3B;    /* 朱赤 */
+            --font-serif: 'Shippori Mincho', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background-color: var(--color-bg-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .serif-text {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        /* --- レイアウト＆コンテナ --- */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: clamp(60px, 8vw, 100px) 0;
+        }
+
+        /* --- ヘッダー --- */
+        .lp-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 0;
+            background: linear-gradient(to bottom, rgba(14,26,47,0.8) 0%, rgba(14,26,47,0) 100%);
+        }
+
+        .lp-header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lp-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 12px;
+        }
+
+        .lp-logo img {
+            height: clamp(32px, 4vw, 44px);
+            width: auto;
+        }
+
+        .lp-logo-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .lp-back-btn {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 8px 18px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            transition: var(--transition);
+        }
+
+        .lp-back-btn:hover {
+            background: white;
+            color: var(--color-navy);
+            border-color: white;
+        }
+
+        /* --- ヒーローセクション --- */
+        .lp-hero {
+            position: relative;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--color-navy);
+            color: white;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        /* 繊細な和風パターンの重ね合わせ */
+        .lp-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 20% 30%, rgba(197, 160, 89, 0.15) 0%, transparent 50%),
+                              radial-gradient(circle at 85% 70%, rgba(194, 58, 59, 0.15) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .lp-hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lp-hero-content {
+            opacity: 0;
+            transform: translateX(-40px);
+            animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .lp-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #A22223 100%);
+            color: white;
+            padding: 6px 16px;
+            font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            border-radius: 3px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(194, 58, 59, 0.35);
+        }
+
+        .lp-hero-title {
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.35;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .lp-hero-title span {
+            color: var(--color-gold-light);
+        }
+
+        .lp-hero-subtitle {
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 35px;
+            border-left: 3px solid var(--color-gold);
+            padding-left: 15px;
+            line-height: 1.7;
+        }
+
+        .lp-hero-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 6px;
+            box-shadow: 0 8px 24px rgba(197, 160, 89, 0.3);
+            transition: var(--transition);
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(197, 160, 89, 0.5);
+            background: linear-gradient(135deg, #DFB971 0%, var(--color-gold) 100%);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            border: 2px solid var(--color-gold);
+            color: var(--color-gold-light);
+            text-decoration: none;
+            padding: 14px 34px;
+            border-radius: 6px;
+            transition: var(--transition);
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .btn-outline:hover {
+            background: rgba(197, 160, 89, 0.15);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .lp-hero-image-area {
+            opacity: 0;
+            transform: scale(0.95) rotate(1deg);
+            animation: heroFadeInScale 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lp-hero-frame {
+            position: relative;
+            background: white;
+            padding: clamp(10px, 2vw, 16px);
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            max-width: min(100%, 420px);
+        }
+
+        .lp-hero-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .lp-hero-frame::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border: 1px solid var(--color-gold);
+            border-radius: 16px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* --- イントロダクション --- */
+        .lp-intro {
+            background-color: var(--color-bg-light);
+            text-align: center;
+            position: relative;
+        }
+
+        .gold-pattern-bg {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(197, 160, 89, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+            pointer-events: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: clamp(40px, 6vw, 60px);
+            position: relative;
+        }
+
+        .section-title span {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--color-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            color: var(--color-navy);
+            line-height: 1.4;
+            display: inline-block;
+            padding-bottom: 18px;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+        }
+
+        .lp-intro-lead {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+            color: var(--color-navy);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .lp-intro-body {
+            font-size: 1.05rem;
+            max-width: 780px;
+            margin: 0 auto;
+            color: var(--color-text);
+            line-height: 2;
+        }
+
+        /* --- ビジュアルストーリー（紙芝居スクロール） --- */
+        .lp-story-section {
+            background-color: #0E1A2F;
+            color: white;
+            position: relative;
+        }
+
+        .lp-story-intro-text {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        .lp-story-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .lp-story-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .lp-story-item.reverse {
+            direction: rtl;
+        }
+
+        .lp-story-item.reverse .lp-story-text {
+            direction: ltr; /* テキストの読み方向を戻す */
+        }
+
+        .lp-story-image-wrap {
+            position: relative;
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            transition: var(--transition);
+        }
+
+        .lp-story-image-wrap img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .lp-story-image-wrap::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 14px;
+            pointer-events: none;
+        }
+
+        .lp-story-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .story-step {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--color-gold-light);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .story-step::after {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background-color: var(--color-gold);
+        }
+
+        .lp-story-text h3 {
+            font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+            color: white;
+            margin-bottom: 18px;
+            line-height: 1.45;
+        }
+
+        .lp-story-text p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.9;
+        }
+
+        /* --- 相談会3大特典 --- */
+        .lp-benefits-section {
+            background-color: #FAF8F4;
+            position: relative;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            text-align: center;
+            position: relative;
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--color-gold), var(--color-gold-dark));
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(197, 160, 89, 0.12);
+            border-color: rgba(197, 160, 89, 0.4);
+        }
+
+        .benefit-badge {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            background: rgba(194, 58, 59, 0.08);
+            padding: 4px 12px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            letter-spacing: 0.15em;
+        }
+
+        .benefit-icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.35rem;
+            color: var(--color-navy);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        /* --- 強みセクション --- */
+        .lp-features-section {
+            background-color: var(--color-bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .feature-img-wrap {
+            position: relative;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+        }
+
+        .feature-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .feature-info {
+            padding: 30px 24px;
+        }
+
+        .feature-info h3 {
+            font-size: 1.25rem;
+            color: var(--color-navy);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .feature-info p {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        /* --- よくある質問 (FAQ) --- */
+        .lp-faq-section {
+            background-color: #FAF8F4;
+        }
+
+        .faq-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.03);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(197, 160, 89, 0.25);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 22px 30px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            outline: none;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--color-gold);
+            font-weight: 400;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: #FCFAF7;
+        }
+
+        .faq-answer-inner {
+            padding: 0 30px 24px 30px;
+            font-size: 0.98rem;
+            color: var(--color-text);
+            line-height: 1.85;
+            border-top: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* 十分な高さ */
+        }
+
+        /* --- CTAセクション --- */
+        .lp-cta-section {
+            background-color: var(--color-navy);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lp-cta-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.12) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .lp-cta-wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-period {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-gold-light);
+            letter-spacing: 0.2em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .lp-cta-wrap h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .lp-cta-wrap p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 40px;
+            line-height: 1.95;
+        }
+
+        /* --- フローティング予約ボタン --- */
+        .floating-cta {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 32px);
+            max-width: 500px;
+            z-index: 999;
+            transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .floating-cta.show {
+            bottom: clamp(16px, 3vw, 24px);
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #A22223 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 50px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+            box-shadow: 0 10px 30px rgba(194, 58, 59, 0.5);
+            transition: var(--transition);
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 14px 35px rgba(194, 58, 59, 0.7);
+            background: linear-gradient(135deg, #DE4A4B 0%, var(--color-accent) 100%);
+        }
+
+        .floating-btn-sub {
+            font-size: 0.75rem;
+            opacity: 0.85;
+            font-weight: 500;
+            display: block;
+            margin-top: -2px;
+        }
+
+        /* --- アニメーション効果用 --- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes heroFadeIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes heroFadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        /* --- フッター --- */
+        .lp-footer {
+            background-color: #080F1D;
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .lp-footer a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 0 10px;
+        }
+
+        .lp-footer a:hover {
+            color: var(--color-gold);
+        }
+
+        /* --- レスポンシブ設計 --- */
+        @media (max-width: 900px) {
+            .lp-hero {
+                padding-top: 120px;
+                min-height: auto;
+            }
+
+            .lp-hero-container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+
+            .lp-hero-content {
+                transform: translateY(-30px);
+                animation: heroFadeInMobile 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+
+            .lp-hero-subtitle {
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 28px;
+            }
+
+            .lp-hero-btn-group {
+                justify-content: center;
+            }
+
+            .lp-story-item {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .lp-story-item.reverse {
+                direction: ltr;
+            }
+
+            .benefits-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .benefit-card {
+                padding: 30px 20px;
+            }
+        }
+
+        @keyframes heroFadeInMobile {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="lp-header">
+        <div class="container lp-header-wrap">
+            <a href="../index.html" class="lp-logo">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span class="lp-logo-text">だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-back-btn">トップへ戻る</a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="lp-hero">
+        <div class="container">
+            <div class="lp-hero-container">
+                <div class="lp-hero-content">
+                    <span class="lp-badge">5月23日(土) - 5月31日(日) 9日間限定</span>
+                    <h1 class="lp-hero-title">GWに振袖を<br><span>決めきれなかった</span><br>お嬢様へ</h1>
+                    <p class="lp-hero-subtitle">
+                        まだ間に合う、初夏の振袖・ママ振 大相談会。<br>
+                        他店と比較したい方、見るだけのご相談も心より歓迎いたします。
+                    </p>
+                    <div class="lp-hero-btn-group">
+                        <a href="#cta" class="btn-gold">無料で店舗来店予約</a>
+                        <a href="#story" class="btn-outline">相談会の内容を見る</a>
+                    </div>
+                </div>
+                <div class="lp-hero-image-area">
+                    <div class="lp-hero-frame">
+                        <img src="../images/IG/1.png" alt="初夏の振袖・ママ振 大相談会。GWに決めきれなかったお嬢様へ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- イントロダクション -->
+    <section class="lp-intro section-padding">
+        <div class="gold-pattern-bg"></div>
+        <div class="container fade-in-up">
+            <div class="section-title">
+                <span>To Furisode Seekers</span>
+                <h2>焦って決める前に、専門店で一度ご相談ください。</h2>
+            </div>
+            <p class="lp-intro-lead">GW後の “振袖迷子” になってしまっているお嬢様へ</p>
+            <p class="lp-intro-body">
+                「大型店では混んでいてゆっくり選べなかった」「好みのコーディネートが見つからず、決めきれなかった」「お母様の振袖（ママ振）を着たいけれどサイズや汚れが心配…」<br><br>
+                そんなお悩みを抱えていませんか？だるまや呉服店では、ご家族皆様でゆっくりお選びいただける、個店ならではのアットホームで落ち着いた特別な相談会をご用意しました。
+            </p>
+        </div>
+    </section>
+
+    <!-- ビジュアルストーリー（紙芝居スクロール） -->
+    <section class="lp-story-section section-padding" id="story">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span style="color: var(--color-gold-light);">Visual Story</span>
+                <h2 style="color: white;">インスタグラムで見る相談会のポイント</h2>
+            </div>
+            <p class="lp-story-intro-text fade-in-up">
+                当店が発信しているInstagramでの解説画像を交えながら、相談会の見どころとよくあるお悩みの解決策をわかりやすくご紹介します。
+            </p>
+
+            <div class="lp-story-grid">
+                <!-- Step 1 -->
+                <div class="lp-story-item fade-in-up">
+                    <div class="lp-story-image-area">
+                        <div class="lp-story-image-wrap">
+                            <img src="../images/IG/2.png" alt="お悩み相談イメージ画像">
+                        </div>
+                    </div>
+                    <div class="lp-story-text">
+                        <span class="story-step">POINT 01</span>
+                        <h3>こんなお悩みありませんか？</h3>
+                        <p>
+                            「GWは予定が詰まっていて見に行けなかった」「何から準備していいかわからない」など、どのようなお悩みでも結構です。だるまや呉服店は、最初のご相談から丁寧に対応いたします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="lp-story-item reverse fade-in-up">
+                    <div class="lp-story-image-area">
+                        <div class="lp-story-image-wrap">
+                            <img src="../images/IG/3.png" alt="比較歓迎イメージ画像">
+                        </div>
+                    </div>
+                    <div class="lp-story-text">
+                        <span class="story-step">POINT 02</span>
+                        <h3>見るだけ・他店との比較も大歓迎</h3>
+                        <p>
+                            一生に一度の大切な晴れ着ですから、納得いくまで吟味していただきたいと考えています。大型チェーン店のような強引な販売は一切ありません。他店を見てから最後にご来店いただくのも大歓迎です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="lp-story-item fade-in-up">
+                    <div class="lp-story-image-area">
+                        <div class="lp-story-image-wrap">
+                            <img src="../images/IG/4.png" alt="3大特典の紹介画像">
+                        </div>
+                    </div>
+                    <div class="lp-story-text">
+                        <span class="story-step">POINT 03</span>
+                        <h3>相談会限定のお得な3大特典</h3>
+                        <p>
+                            5月下旬限定の特別な特典をご用意しました。WEBからの事前予約で成人式のご準備が大変お得になります。ご成約特典も充実しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相談会3大特典 -->
+    <section class="lp-benefits-section section-padding">
+        <div class="container fade-in-up">
+            <div class="section-title">
+                <span>Special Benefits</span>
+                <h2>相談会限定の豪華3大特典</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-badge">特典 1</span>
+                    <div class="benefit-icon">🎟️</div>
+                    <h3>WEB予約で<br>5,000円OFF</h3>
+                    <p>公式ホームページの店舗予約フォームより事前予約いただいた方へ、ご成約時に使える割引きチケットを贈呈します。（5万円以上でご利用可）</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="benefit-badge">特典 2</span>
+                    <div class="benefit-icon">🎁</div>
+                    <h3>浴衣 または 髪飾り<br>プレゼント</h3>
+                    <p>振袖のレンタル、またはご購入のご成約をいただいたお嬢様へ、晴れ姿を引き立てる高級髪飾り、もしくはこれからの季節に嬉しい浴衣をプレゼントいたします。</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="benefit-badge">特典 3</span>
+                    <div class="benefit-icon">👘</div>
+                    <h3>ママ振チェック<br>【無料】</h3>
+                    <p>お母様の振袖を今風にアップデートしませんか？シミ抜きの必要性、寸法チェック、今っぽく生まれ変わる最新の小物コーディネートを完全無料でご提案します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- だるまやが最後の決め手になる理由 -->
+    <section class="lp-features-section section-padding">
+        <div class="container fade-in-up">
+            <div class="section-title">
+                <span>Why Darumaya</span>
+                <h2>だるまや呉服店が選ばれる理由</h2>
+            </div>
+            
+            <div class="features-grid">
+                <!-- カード1 -->
+                <div class="feature-card">
+                    <div class="feature-img-wrap">
+                        <img src="../images/IG/5.png" alt="洗練されたコーディネート力">
+                    </div>
+                    <div class="feature-info">
+                        <h3>量産型にならない<br>圧倒的コーディネート力</h3>
+                        <p>帯や小物の合わせ方ひとつで、振袖の美しさは幾倍にも引き立ちます。伝統の美しさに現代的なセンスを調和させ、お嬢様の個性を活かすスタイリングをご提案します。</p>
+                    </div>
+                </div>
+
+                <!-- カード2 -->
+                <div class="feature-card">
+                    <div class="feature-img-wrap">
+                        <img src="../images/IG/6.png" alt="ママ振リメイク相談">
+                    </div>
+                    <div class="feature-info">
+                        <h3>お母様の思い出を今っぽく<br>蘇らせるママ振リメイク</h3>
+                        <p>サイズ調整や丸洗い、染み抜き、小物の差し替えアレンジなど、専門店の高い技術でお母様の振袖をお嬢様にぴったりのモダンな一枚へと蘇らせます。</p>
+                    </div>
+                </div>
+
+                <!-- カード3 -->
+                <div class="feature-card">
+                    <div class="feature-img-wrap">
+                        <img src="../images/IG/7.png" alt="個店の落ち着いた空間">
+                    </div>
+                    <div class="feature-info">
+                        <h3>ご家族で安心して選べる<br>アットホームな個店空間</h3>
+                        <p>混雑を避け、一組一組のお客様とじっくり向き合えるアットホームな予約制サロンです。時間を気にせず、ご家族一緒に笑顔あふれる振袖選びをお楽しみください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 (FAQ) -->
+    <section class="lp-faq-section section-padding">
+        <div class="container fade-in-up">
+            <div class="section-title">
+                <span>Frequently Asked Questions</span>
+                <h2>よくあるご質問</h2>
+            </div>
+
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>見るだけ、他店との比較だけでも本当に大丈夫ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            はい、もちろん大歓迎です！振袖はとても高価で大切なものですので、他店様とじっくり比較した上でご納得いただいてお決めになるのが一番です。無理な勧誘は一切行いませんので、安心してお下見にお越しください。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>ママ振（母の振袖）のコーディネートや汚れは1点だけの相談でもいいですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            もちろんです！「帯締め1本だけ今風にしたい」「シミがあるか見てほしい」「長襦袢だけがない」といった、ピンポイントなご相談も大歓迎です。どんな些細な不安も専門スタッフが丁寧に解消いたします。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>予約なしで突然店舗へ伺っても大丈夫でしょうか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            ご予約なしでもご覧いただけますが、相談会期間中は混雑し、お嬢様へのご試着対応やコーディネート提案に時間を要する場合がございます。事前にお時間を確約できるWEB来店予約をしていただくと、特典（5,000円OFF）が適用されスムーズにご案内できます。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="lp-cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="lp-cta-wrap fade-in-up">
+                <span class="cta-period">5月23日(土)〜5月31日(日) 開催</span>
+                <h2>初夏の振袖・ママ振 大相談会</h2>
+                <p>
+                    ご家族皆様でお嬢様に最もお似合いになる一枚を、焦らず楽しくお選びいただける特別な期間です。<br>
+                    事前WEB来店予約により、相談会限定の割引特典が適用されます。ぜひお気軽にご利用ください。
+                </p>
+                <a href="../index.html#contact" class="btn-gold" style="font-size: 1.15rem; padding: 18px 50px;">
+                    【無料】店舗来店予約はこちら
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フローティング予約ボタン -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="../index.html#contact" class="floating-btn">
+            <div>
+                <span>【無料】店舗来店予約フォームへ</span>
+                <span class="floating-btn-sub">事前WEB予約で5,000円OFF特典付き</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- フッター -->
+    <footer class="lp-footer">
+        <div class="container">
+            <p>&copy; 2026 だるまや呉服店 All Rights Reserved. ｜ <a href="../index.html">トップページへ戻る</a></p>
+        </div>
+    </footer>
+
+    <!-- インタラクション用JavaScript -->
+    <script>
+        // FAQアコーディオンの実装
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                
+                // 他のすべてのアクティブなFAQを閉じる
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                
+                // クリックされたFAQのトグル
+                item.classList.toggle('active');
+                const answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+
+        // スクロールフェードインアニメーション
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // 一度表示されたら監視をやめる
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // ヒーロー通過後にフローティングボタンを表示
+        const floatingCta = document.getElementById('floatingCta');
+        const heroSection = document.querySelector('.lp-hero');
+
+        window.addEventListener('scroll', () => {
+            const heroHeight = heroSection.offsetHeight;
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > heroHeight - 100) {
+                floatingCta.classList.add('show');
+            } else {
+                floatingCta.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
