@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="どれを選べばいい？だるまや呉服店の成人式振袖レンタル・写真パック・シンプルプランの選び方ガイド。あなたにぴったりのプランを無料診断！大阪・駒川商店街で創業100年以上の信頼。">
+    <title>【完全ガイド】あなたにぴったりの振袖プランはどれ？ | だるまや呉服店</title>
+    
+    <!-- Google Fonts: Shippori Mincho & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- プレミアム和モダン デザインシステム --- */
+        :root {
+            --color-navy: #0E1A2F;      /* 深い群青（漆黒に近い格式高いネイビー） */
+            --color-gold-light: #F4EAD4;/* 優雅な金砂 */
+            --color-gold: #C5A059;      /* プレミアムゴールド */
+            --color-gold-dark: #9A7736; /* 落ち着いた金 */
+            --color-text: #222222;      /* 墨黒 */
+            --color-text-muted: #555555;/* 鈍色 */
+            --color-bg-light: #FDFCF9;  /* 生成り（和紙のやさしい白） */
+            --color-accent: #A22223;    /* 格式高い朱赤・茜 */
+            --color-accent-light: #C23A3B;
+            --color-teal: #4F9D9A;      /* 洗練された和の青磁色 */
+            --color-teal-light: #E6F3F2;
+            --font-serif: 'Shippori Mincho', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --font-outfit: 'Outfit', sans-serif;
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-premium: 0 20px 50px rgba(14, 26, 47, 0.08);
+            --shadow-heavy: 0 30px 70px rgba(14, 26, 47, 0.2);
+            --border-elegant: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background-color: var(--color-bg-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 和紙の質感テクスチャ背景 */
+        .washi-bg {
+            position: relative;
+        }
+        .washi-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(197, 160, 89, 0.04) 1.2px, transparent 0);
+            background-size: 24px 24px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1, h2, h3, .serif-text {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        /* --- 共通レイアウト --- */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-padding {
+            padding: clamp(60px, 8vw, 110px) 0;
+        }
+
+        /* --- ヘッダー --- */
+        .lp-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 24px 0;
+            background: linear-gradient(to bottom, rgba(14,26,47,0.75) 0%, rgba(14,26,47,0) 100%);
+        }
+
+        .lp-header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lp-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 12px;
+        }
+
+        .lp-logo img {
+            height: clamp(34px, 4.5vw, 46px);
+            width: auto;
+        }
+
+        .lp-logo-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 2vw, 1.45rem);
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .lp-back-btn {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            transition: var(--transition);
+        }
+
+        .lp-back-btn:hover {
+            background: white;
+            color: var(--color-navy);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- ヒーローセクション --- */
+        .lp-hero {
+            position: relative;
+            min-height: 98vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--color-navy);
+            color: white;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            overflow: hidden;
+        }
+
+        /* 優美なグラデーションの重なり */
+        .lp-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.16) 0%, transparent 60%),
+                        radial-gradient(circle at 10% 80%, rgba(162, 34, 35, 0.14) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        /* 和風のライン・雲海モチーフ */
+        .lp-hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--color-bg-light), transparent);
+            z-index: 2;
+        }
+
+        .lp-hero-container {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            align-items: center;
+            gap: clamp(30px, 5vw, 60px);
+            width: 100%;
+            position: relative;
+            z-index: 3;
+        }
+
+        .lp-hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .lp-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #7e1617 100%);
+            color: white;
+            padding: 6px 18px;
+            font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            box-shadow: 0 6px 20px rgba(162, 34, 35, 0.4);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .lp-hero-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            line-height: 1.3;
+            margin-bottom: 24px;
+            color: #FFFFFF;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .lp-hero-title span {
+            color: var(--color-gold-light);
+            background: linear-gradient(to bottom, #FFF, var(--color-gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lp-hero-subtitle {
+            font-family: var(--font-serif);
+            font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            border-left: 3px solid var(--color-gold);
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .lp-hero-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 38px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+            transition: var(--transition);
+            letter-spacing: 0.1em;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(197, 160, 89, 0.55);
+            background: linear-gradient(135deg, #dfba74 0%, var(--color-gold) 100%);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            border: 2px solid var(--color-gold);
+            color: var(--color-gold-light);
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 8px;
+            transition: var(--transition);
+            letter-spacing: 0.1em;
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .btn-outline:hover {
+            background: rgba(197, 160, 89, 0.15);
+            color: white;
+            transform: translateY(-2px);
+            border-color: white;
+        }
+
+        .lp-hero-image-area {
+            opacity: 0;
+            transform: scale(0.92) rotate(1deg);
+            animation: heroFadeInScale 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 額縁をイメージしたプレミアム金枠フレーム */
+        .lp-hero-frame {
+            position: relative;
+            background: white;
+            padding: clamp(10px, 2vw, 16px);
+            border-radius: 16px;
+            box-shadow: var(--shadow-heavy);
+            max-width: min(100%, 430px);
+            border: 1px solid rgba(197,160,89,0.3);
+            transition: var(--transition);
+        }
+
+        .lp-hero-frame:hover {
+            transform: scale(1.02) rotate(-0.5deg);
+        }
+
+        .lp-hero-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .lp-hero-frame::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border: 1px solid var(--color-gold);
+            border-radius: 20px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* 伝統的な和柄の装飾飾り */
+        .shippo-decor {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-image: radial-gradient(rgba(197,160,89,0.12) 20%, transparent 20%);
+            background-size: 15px 15px;
+            top: -20px;
+            right: -20px;
+            z-index: -1;
+        }
+
+        /* --- 診断ゲームセクション --- */
+        .lp-diagnosis {
+            background-color: var(--color-bg-light);
+            position: relative;
+        }
+
+        .diagnosis-card {
+            background: white;
+            border-radius: 24px;
+            padding: clamp(30px, 6vw, 60px);
+            box-shadow: var(--shadow-premium);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diagnosis-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, var(--color-gold), var(--color-accent), var(--color-teal));
+        }
+
+        .diagnosis-title {
+            text-align: center;
+            font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+            color: var(--color-navy);
+            margin-bottom: 12px;
+        }
+
+        .diagnosis-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* 診断コンテンツの切り替え領域 */
+        .diagnosis-content {
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .diag-step {
+            display: none;
+        }
+
+        .diag-step.active {
+            display: block;
+            animation: diagFadeIn 0.5s ease forwards;
+        }
+
+        .diag-question-num {
+            font-family: var(--font-outfit);
+            font-size: 1.1rem;
+            color: var(--color-gold);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+
+        .diag-question-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+            color: var(--color-navy);
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .diag-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .diag-option-btn {
+            background: #FCFAF6;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 12px;
+            padding: 18px 24px;
+            font-family: var(--font-sans);
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            color: var(--color-text);
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+        }
+
+        .diag-option-btn::before {
+            content: "";
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            background: white;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .diag-option-btn:hover {
+            background: var(--color-gold-light);
+            border-color: var(--color-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(197, 160, 89, 0.15);
+        }
+
+        .diag-option-btn:hover::before {
+            background: var(--color-gold);
+            box-shadow: inset 0 0 0 4px white;
+        }
+
+        /* 診断結果画面 */
+        .diag-result {
+            text-align: center;
+        }
+
+        .diag-result-badge {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--color-accent);
+            background: rgba(162, 34, 35, 0.08);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .diag-result-plan-name {
+            font-family: var(--font-serif);
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            color: var(--color-accent);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .diag-result-desc {
+            font-size: 1.05rem;
+            color: var(--color-text);
+            max-width: 600px;
+            margin: 0 auto 35px;
+            line-height: 1.8;
+        }
+
+        /* 進捗バー */
+        .diag-progress-container {
+            max-width: 300px;
+            margin: 30px auto 0;
+        }
+
+        .diag-progress-bar {
+            height: 4px;
+            background: #EFECE6;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .diag-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--color-gold), var(--color-accent));
+            transition: width 0.4s ease;
+        }
+
+        /* ローディング */
+        .diag-loading {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .diag-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(197, 160, 89, 0.15);
+            border-radius: 50%;
+            border-top-color: var(--color-gold);
+            animation: diagSpin 1s linear infinite;
+            margin: 0 auto 24px;
+        }
+
+        /* --- セクションタイトル --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: clamp(40px, 6vw, 70px);
+            position: relative;
+        }
+
+        .section-title span {
+            font-family: var(--font-outfit);
+            font-size: 0.95rem;
+            color: var(--color-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.65rem, 2.8vw, 2.5rem);
+            color: var(--color-navy);
+            line-height: 1.4;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+        }
+
+        /* --- ビジュアルイントロセクション --- */
+        .lp-intro {
+            background-color: var(--color-bg-light);
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            align-items: center;
+            gap: clamp(30px, 5vw, 60px);
+        }
+
+        .intro-image-area {
+            position: relative;
+        }
+
+        .intro-frame {
+            background: white;
+            padding: 14px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transform: rotate(-1deg);
+            transition: var(--transition);
+        }
+
+        .intro-frame:hover {
+            transform: rotate(0) scale(1.02);
+        }
+
+        .intro-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .intro-text-area h3 {
+            font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+            color: var(--color-navy);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .intro-text-area p {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            line-height: 1.95;
+            margin-bottom: 30px;
+        }
+
+        .intro-check-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .intro-check-list li {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .intro-check-list li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(162, 34, 35, 0.08);
+            color: var(--color-accent);
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* --- プラン詳細ストーリーセクション --- */
+        .lp-plans-section {
+            background-color: var(--color-navy);
+            color: white;
+            position: relative;
+        }
+
+        .lp-plans-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 10% 20%, rgba(197, 160, 89, 0.06) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(79, 157, 154, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .plans-story-list {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(70px, 10vw, 120px);
+            margin-top: 50px;
+        }
+
+        .plan-story-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: clamp(40px, 6vw, 80px);
+        }
+
+        .plan-story-item.reverse {
+            direction: rtl;
+        }
+
+        .plan-story-item.reverse .plan-story-text,
+        .plan-story-item.reverse .plan-story-checklist {
+            direction: ltr; /* テキスト進行を左からに戻す */
+        }
+
+        .plan-story-img-wrap {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .plan-story-img-wrap:hover {
+            transform: translateY(-5px) scale(1.01);
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+
+        .plan-story-img-wrap img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .plan-story-img-wrap::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border: 1px solid rgba(197, 160, 89, 0.35);
+            border-radius: 18px;
+            pointer-events: none;
+        }
+
+        /* ふせん風の可愛いラベルデコレーション */
+        .plan-sticker {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: var(--color-gold);
+            color: white;
+            font-family: var(--font-outfit);
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 2px;
+            letter-spacing: 0.1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transform: rotate(-3deg);
+            z-index: 10;
+        }
+
+        .plan-story-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-step-num {
+            font-family: var(--font-outfit);
+            font-size: 0.95rem;
+            color: var(--color-gold-light);
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-step-num::after {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-gold);
+        }
+
+        .plan-story-text h3 {
+            font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+            color: white;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .plan-target-badge {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-gold-light);
+            border: 1.5px solid var(--color-gold);
+            padding: 3px 12px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        .plan-story-price {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            border-radius: 12px;
+            padding: 24px 30px;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+
+        .plan-story-price-lead {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 4px;
+        }
+
+        .plan-story-price-num {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            color: var(--color-gold-light);
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .plan-story-price-num span {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            color: white;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+
+        .plan-story-price-note {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .plan-story-checklist-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+        }
+
+        .plan-story-checklist {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .plan-story-checklist li {
+            font-size: 0.98rem;
+            color: rgba(255,255,255,0.85);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .plan-story-checklist li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--color-gold);
+            color: var(--color-navy);
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* 特定プラン（フルセットなど）のプレミアムハイライト装飾 */
+        .plan-story-item.premium-highlight .plan-story-img-wrap {
+            border-color: var(--color-gold);
+            box-shadow: 0 30px 70px rgba(197, 160, 89, 0.15);
+        }
+        .plan-story-item.premium-highlight .plan-story-price {
+            background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, rgba(14, 26, 47, 0.4) 100%);
+            border-color: var(--color-gold);
+        }
+
+        /* --- 3プラン比較マトリクス --- */
+        .lp-comparison-section {
+            background-color: #FAF8F4;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .comp-card-desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+
+        .comp-card-column {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .comp-card-column:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(197, 160, 89, 0.12);
+            border-color: rgba(197, 160, 89, 0.4);
+        }
+
+        /* 特定コラムのハイライト */
+        .comp-card-column.highlight {
+            border-color: var(--color-accent);
+            position: relative;
+            box-shadow: 0 20px 50px rgba(162, 34, 35, 0.12);
+        }
+
+        .comp-card-column.highlight::before {
+            content: "一番人気";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--color-accent);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 0;
+            letter-spacing: 0.1em;
+        }
+
+        .comp-card-header {
+            padding: 30px 20px 24px 20px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+        .comp-card-column.highlight .comp-card-header {
+            padding-top: 42px; /* ラベル分下げる */
+        }
+
+        .comp-card-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.2rem, 2vw, 1.45rem);
+            color: var(--color-navy);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .comp-card-price {
+            font-family: var(--font-serif);
+            font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+            color: var(--color-accent);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .comp-card-price span {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .comp-card-row {
+            padding: 24px 16px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.08);
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .comp-card-row-title {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-bottom: 6px;
+            display: none; /* デスクトップでは非表示 */
+        }
+
+        .comp-card-row:last-child {
+            border-bottom: none;
+        }
+
+        /* 判定記号 */
+        .comp-symbol {
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .comp-symbol.double-circle {
+            color: var(--color-accent);
+        }
+        .comp-symbol.circle {
+            color: var(--color-teal);
+        }
+        .comp-symbol.triangle {
+            color: var(--color-text-muted);
+            font-size: 1.4rem;
+        }
+
+        .comp-feature-text {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-top: 4px;
+        }
+
+        .comp-card-footer {
+            padding: 24px 16px;
+            background: #FCFAF6;
+        }
+
+        .comp-card-btn {
+            display: block;
+            background: white;
+            border: 1.5px solid var(--color-navy);
+            color: var(--color-navy);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .comp-card-btn:hover {
+            background: var(--color-navy);
+            color: white;
+        }
+
+        .comp-card-column.highlight .comp-card-btn {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(162, 34, 35, 0.25);
+        }
+        .comp-card-column.highlight .comp-card-btn:hover {
+            background: #7e1617;
+            border-color: #7e1617;
+        }
+
+        /* 画像カードスライド表示 */
+        .comp-visual-card {
+            margin-top: 60px;
+            background: white;
+            border-radius: 20px;
+            padding: clamp(20px, 4vw, 40px);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            box-shadow: var(--shadow-premium);
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .comp-visual-img-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .comp-visual-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .comp-visual-text h3 {
+            font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+            color: var(--color-navy);
+            margin-bottom: 16px;
+        }
+
+        .comp-visual-text p {
+            font-size: 1.05rem;
+            color: var(--color-text-muted);
+            line-height: 1.9;
+            margin-bottom: 24px;
+        }
+
+        /* --- 不安解消・FAQセクション --- */
+        .lp-faq-section {
+            background-color: var(--color-bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: clamp(30px, 5vw, 60px);
+            align-items: flex-start;
+        }
+
+        .faq-left-visual {
+            background: white;
+            padding: 14px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transform: rotate(1deg);
+            transition: var(--transition);
+        }
+
+        .faq-left-visual:hover {
+            transform: rotate(0) scale(1.02);
+        }
+
+        .faq-left-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .faq-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(197, 160, 89, 0.4);
+            box-shadow: 0 8px 24px rgba(197, 160, 89, 0.08);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 24px 30px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: var(--color-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            outline: none;
+        }
+
+        .faq-icon-shape {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--color-gold);
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: #FCFAF7;
+        }
+
+        .faq-answer-inner {
+            padding: 0 30px 24px 30px;
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.85;
+            border-top: 1px solid rgba(197, 160, 89, 0.06);
+        }
+
+        .faq-item.active {
+            border-color: var(--color-gold);
+        }
+
+        .faq-item.active .faq-icon-shape {
+            background: var(--color-gold);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px; /* 十分な高さ */
+        }
+
+        /* --- CTAセクション --- */
+        .lp-cta-section {
+            background-color: var(--color-navy);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lp-cta-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.14) 0%, transparent 60%);
+            z-index: 1;
+        }
+
+        .lp-cta-wrap {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-period {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-gold-light);
+            letter-spacing: 0.25em;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid var(--color-gold);
+            padding-bottom: 6px;
+        }
+
+        .lp-cta-wrap h2 {
+            font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.4;
+        }
+
+        .lp-cta-wrap p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 45px;
+            line-height: 1.9;
+        }
+
+        /* お得バナーデコレーション */
+        .cta-offer-banner {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            align-items: center;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .cta-offer-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .cta-offer-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cta-offer-text h3 {
+            font-size: 1.3rem;
+            color: var(--color-gold-light);
+            margin-bottom: 8px;
+        }
+
+        .cta-offer-text p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        .lp-cta-wrap .btn-gold {
+            font-size: 1.25rem;
+            padding: 18px 60px;
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.45);
+        }
+
+        /* 相談ボタンSNS */
+        .sns-btn-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .sns-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .sns-btn-line {
+            background-color: #06C755;
+            color: white;
+            box-shadow: 0 6px 20px rgba(6,199,85,0.3);
+        }
+
+        .sns-btn-line:hover {
+            transform: translateY(-2px);
+            background-color: #05ae4a;
+            box-shadow: 0 10px 25px rgba(6,199,85,0.45);
+        }
+
+        .sns-btn-ig {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            box-shadow: 0 6px 20px rgba(220,39,67,0.3);
+        }
+
+        .sns-btn-ig:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220,39,67,0.45);
+        }
+
+        /* --- フローティング予約ボタン --- */
+        .floating-cta {
+            position: fixed;
+            bottom: -110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 32px);
+            max-width: 520px;
+            z-index: 999;
+            transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .floating-cta.show {
+            bottom: clamp(16px, 3vw, 24px);
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #7e1617 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            box-shadow: 0 12px 35px rgba(162, 34, 35, 0.5);
+            transition: var(--transition);
+            letter-spacing: 0.08em;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(162, 34, 35, 0.7);
+            background: linear-gradient(135deg, #c32d2f 0%, var(--color-accent) 100%);
+        }
+
+        /* 予約ボタンのキラッと光るマイクロアニメーション */
+        .floating-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 30%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.35);
+            transform: skewX(-30deg);
+            transition: 0.75s ease;
+            animation: shine 4s ease-in-out infinite;
+        }
+
+        .floating-btn-sub {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            font-weight: 500;
+            display: block;
+            margin-top: 1px;
+            color: var(--color-gold-light);
+        }
+
+        /* --- アニメーション効果用 --- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes heroFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroFadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        @keyframes diagFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes diagSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -60%;
+            }
+            15% {
+                left: 130%;
+            }
+            100% {
+                left: 130%;
+            }
+        }
+
+        /* --- フッター --- */
+        .lp-footer {
+            background-color: #060B14;
+            color: rgba(255,255,255,0.5);
+            padding: 45px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .lp-footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 0 12px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .lp-footer a:hover {
+            color: var(--color-gold-light);
+            border-bottom-color: var(--color-gold-light);
+        }
+
+        .copyright {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* --- レスポンシブ設計 --- */
+        @media (max-width: 900px) {
+            .lp-hero {
+                padding-top: 130px;
+                min-height: auto;
+            }
+
+            .lp-hero-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .lp-hero-subtitle {
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 30px;
+            }
+
+            .lp-hero-btn-group {
+                justify-content: center;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .intro-frame {
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .plan-story-item {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                max-width: 550px;
+                margin: 0 auto;
+            }
+
+            .plan-story-item.reverse {
+                direction: ltr;
+            }
+
+            .plan-story-img-wrap {
+                order: 1; /* スマホでは画像をテキストの上に配置 */
+            }
+
+            .plan-story-text {
+                order: 2;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 450px;
+                margin: 40px auto 0;
+            }
+
+            .comp-card-desc {
+                display: none; /* スマホでは説明コラムを非表示 */
+            }
+
+            .comp-card-row-title {
+                display: block; /* スマホのみ項目名を表示 */
+            }
+
+            .comp-card-row {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 24px;
+                text-align: left;
+                background: white;
+            }
+
+            .comp-card-row:nth-child(even) {
+                background: #FAF8F4;
+            }
+
+            .comp-visual-card {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                max-width: 550px;
+                margin: 40px auto 0;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .faq-left-visual {
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .cta-offer-banner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .cta-offer-img {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body class="washi-bg">
+
+    <!-- ヘッダー -->
+    <header class="lp-header">
+        <div class="container lp-header-wrap">
+            <a href="../index.html" class="lp-logo">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span class="lp-logo-text">だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-back-btn">トップページへ戻る</a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="lp-hero">
+        <div class="container">
+            <div class="lp-hero-container">
+                <div class="lp-hero-content">
+                    <span class="lp-badge">成人式振袖選び完全ガイド</span>
+                    <h1 class="lp-hero-title">振袖プラン、<br><span>どれを選ぶ？</span></h1>
+                    <p class="lp-hero-subtitle">
+                        一生に一度の大切なハタチの記念。<br>
+                        費用重視、写真重視、全部お任せ？<br>
+                        あなたにぴったりのプランを見つける解説LPです。
+                    </p>
+                    <div class="lp-hero-btn-group">
+                        <a href="#diagnosis" class="btn-gold">自分に合うプランを無料診断</a>
+                        <a href="#plans" class="btn-outline">プランの違いを見る</a>
+                    </div>
+                </div>
+                <div class="lp-hero-image-area">
+                    <div class="shippo-decor"></div>
+                    <div class="lp-hero-frame">
+                        <img src="../images/IG2/01.png" alt="振袖プランどれを選ぶ？成人式準備ガイド だるまや呉服店">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プラン診断ゲームセクション -->
+    <section class="lp-diagnosis section-padding" id="diagnosis">
+        <div class="container">
+            <div class="diagnosis-card">
+                <div class="diagnosis-content">
+                    <!-- 診断スタート画面 -->
+                    <div class="diag-step active" id="diagStart">
+                        <h2 class="diagnosis-title">3問でわかる！振袖プラン無料判定</h2>
+                        <p class="diagnosis-subtitle">簡単な質問にタップするだけで、あなたに一番おすすめのプランをご紹介します。</p>
+                        <div class="diag-options" style="max-width: 320px;">
+                            <button class="btn-gold" style="width: 100%; border-radius: 50px; font-size: 1.1rem; padding: 18px 0;" onclick="startDiagnosis()">診断をはじめる</button>
+                        </div>
+                    </div>
+
+                    <!-- 質問1 -->
+                    <div class="diag-step" id="diagQ1">
+                        <div class="diag-question-num">QUESTION 01</div>
+                        <h3 class="diag-question-text">成人式当日は、会場に出席して<br>友達や家族とお祝いしますか？</h3>
+                        <div class="diag-options">
+                            <button class="diag-option-btn" onclick="selectAnswer(1, 'A')">はい！式に出席して華やかに楽しみたい</button>
+                            <button class="diag-option-btn" onclick="selectAnswer(1, 'B')">いいえ。式には出ない / または写真だけで残したい</button>
+                        </div>
+                    </div>
+
+                    <!-- 質問2 -->
+                    <div class="diag-step" id="diagQ2">
+                        <div class="diag-question-num">QUESTION 02</div>
+                        <h3 class="diag-question-text">前撮り（写真撮影）やアルバムは<br>どのくらい重視しますか？</h3>
+                        <div class="diag-options">
+                            <button class="diag-option-btn" onclick="selectAnswer(2, 'A')">プロのスタジオで綺麗な写真をたくさん残したい！</button>
+                            <button class="diag-option-btn" onclick="selectAnswer(2, 'B')">写真は最低限（1〜2カット）か、スマホ等でいい</button>
+                        </div>
+                    </div>
+
+                    <!-- 質問3 -->
+                    <div class="diag-step" id="diagQ3">
+                        <div class="diag-question-num">QUESTION 03</div>
+                        <h3 class="diag-question-text">当日のヘアセット・メイク・着付けなどの<br>お支度は呉服店にお任せしたいですか？</h3>
+                        <div class="diag-options">
+                            <button class="diag-option-btn" onclick="selectAnswer(3, 'A')">すべてプロにまとめてお任せして安心したい</button>
+                            <button class="diag-option-btn" onclick="selectAnswer(3, 'B')">自分で手配する / または当日の支度は不要</button>
+                        </div>
+                    </div>
+
+                    <!-- ローディング -->
+                    <div class="diag-step" id="diagLoading">
+                        <div class="diag-loading">
+                            <div class="diag-spinner"></div>
+                            <p style="font-weight: 700; color: var(--color-navy); font-size: 1.15rem;">あなたに最適のプランを分析中...</p>
+                        </div>
+                    </div>
+
+                    <!-- 結果画面 -->
+                    <div class="diag-step" id="diagResult">
+                        <div class="diag-result">
+                            <span class="diag-result-badge">あなたにおすすめのプランは</span>
+                            <div class="diag-result-plan-name" id="resultPlanName">フルセットプラン</div>
+                            <p class="diag-result-desc" id="resultPlanDesc">
+                                前撮りから成人式当日のお支度まで全てコミコミ！追加費用を気にせず、プロに全部お任せして安心のハタチを迎えたいあなたに最適です。
+                            </p>
+                            <div class="diag-options" style="max-width: 320px;">
+                                <a href="#planSimple" class="btn-gold" id="resultJumpLink" style="width: 100%; border-radius: 50px; font-size: 1.05rem;" onclick="resetDiagScroll()">
+                                    このプランの詳細へ進む
+                                </a>
+                                <button onclick="startDiagnosis()" style="background: none; border: none; color: var(--color-text-muted); text-decoration: underline; margin-top: 18px; font-size: 0.9rem; cursor: pointer;">
+                                    もう一度診断する
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- プログレスバー -->
+                <div class="diag-progress-container" id="diagProgress" style="display: none;">
+                    <div class="diag-progress-bar">
+                        <div class="diag-progress-fill" id="diagProgressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ビジュアルイントロセクション -->
+    <section class="lp-intro section-padding">
+        <div class="container">
+            <div class="intro-grid fade-in-up">
+                <div class="intro-image-area">
+                    <div class="intro-frame">
+                        <img src="../images/IG2/02.png" alt="成人式準備お悩みチェック">
+                    </div>
+                </div>
+                <div class="intro-text-area">
+                    <div class="section-title" style="text-align: left; margin-bottom: 24px;">
+                        <span>Your Concerns</span>
+                        <h2 style="display: block; padding-bottom: 12px; margin-bottom: 0;">こんなお悩み、<br>ありませんか？</h2>
+                    </div>
+                    <p>
+                        一生に一度だからこそ、振袖選びは迷いや不安がつきもの。「高額な買い物だから費用をできるだけ抑えたい」「成人式には出ないけれど、思い出の写真は綺麗に残したい」「何から何まで呉服店に全部手配してほしい」など、ご要望はご家族それぞれ異なります。
+                    </p>
+                    <ul class="intro-check-list">
+                        <li>費用をスマートに抑えたい</li>
+                        <li>写真や記念アルバムだけを重視したい</li>
+                        <li>前撮りから当日支度まで全部お任せしたい</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3つのプラン詳細ストーリーセクション -->
+    <section class="lp-plans-section section-padding" id="plans">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span style="color: var(--color-gold-light);">Plan Details</span>
+                <h2 style="color: white;">だるまやの3大振袖プラン詳細</h2>
+            </div>
+
+            <div class="plans-story-list">
+                
+                <!-- Plan 1: シンプルプラン -->
+                <div class="plan-story-item fade-in-up" id="planSimple">
+                    <div class="plan-story-img-wrap">
+                        <div class="plan-sticker">PLAN 01</div>
+                        <img src="../images/IG2/03.png" alt="シンプルプラン 必要なものだけ追加">
+                    </div>
+                    <div class="plan-story-text">
+                        <span class="plan-step-num">SIMPLE PLAN</span>
+                        <h3>シンプルプラン</h3>
+                        <span class="plan-target-badge">費用を抑えたい方へ</span>
+                        
+                        <div class="plan-story-price">
+                            <div class="plan-story-price-lead">振袖衣装レンタル</div>
+                            <div class="plan-story-price-num">49,800<span>円〜（税込）</span></div>
+                            <div class="plan-story-price-note">※帯や小物のみの追加、お持ち込み等も自由にアレンジ可能</div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h4 class="plan-story-checklist-title">プラン内容</h4>
+                            <ul class="plan-story-checklist">
+                                <li><strong>振袖衣装レンタル（お手頃価格から豊富に選択）</strong></li>
+                                <li>成人式当日お支度（オプション追加 +20,000円）</li>
+                                <li>プロ前撮り撮影パック（オプション追加 +25,000円）</li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.8;">
+                            「衣装だけをリーズナブルに借りて、ヘアメイクは馴染みのサロンで頼みたい」「余計なセットを省いて予算に合わせたい」という賢く無駄のない振袖選びを応援します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plan 2: 写真パック -->
+                <div class="plan-story-item reverse fade-in-up" id="planPhoto">
+                    <div class="plan-story-img-wrap">
+                        <div class="plan-sticker" style="background: var(--color-teal);">PLAN 02</div>
+                        <img src="../images/IG2/04.png" alt="写真パック 振袖・撮影・アルバムまで全部セット">
+                    </div>
+                    <div class="plan-story-text">
+                        <span class="plan-step-num" style="color: var(--color-teal-light);">PHOTO PLAN</span>
+                        <h3>写真パック</h3>
+                        <span class="plan-target-badge" style="color: var(--color-teal-light); border-color: var(--color-teal);">写真だけ残したい方へ</span>
+                        
+                        <div class="plan-story-price" style="border-color: rgba(79, 157, 154, 0.4);">
+                            <div class="plan-story-price-lead">すべて込みの安心価格</div>
+                            <div class="plan-story-price-num" style="color: var(--color-teal-light);">29,800<span>円（税込）</span></div>
+                            <div class="plan-story-price-note">※+20,000円で振袖を着たままのお出かけ・外出が可能です</div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h4 class="plan-story-checklist-title">プラン内容（全部セット）</h4>
+                            <ul class="plan-story-checklist">
+                                <li><strong>振袖衣装レンタル一式</strong></li>
+                                <li><strong>本格ヘアセット ＆ プロのフルメイク</strong></li>
+                                <li><strong>着付師による丁寧な着付け</strong></li>
+                                <li><strong>本格スタジオでの写真撮影 ＆ 2ポーズ見開き高級アルバム</strong></li>
+                                <li><strong>撮影デジタル画像データ進呈</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.8;">
+                            成人式には出席しない方、あるいは撮影の日と式当日を分けて、とにかく綺麗な写真をきちんと手元に残したい方に絶対おすすめの充実パックです。手ぶらでご来店いただけます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plan 3: フルセットプラン -->
+                <div class="plan-story-item premium-highlight fade-in-up" id="planFull">
+                    <div class="plan-story-img-wrap">
+                        <div class="plan-sticker" style="background: var(--color-accent);">PLAN 03</div>
+                        <img src="../images/IG2/05.png" alt="フルセットプラン 前撮りも当日も無料">
+                    </div>
+                    <div class="plan-story-text">
+                        <span class="plan-step-num">FULL SET PLAN</span>
+                        <h3>フルセットプラン</h3>
+                        <span class="plan-target-badge">全部まとめてお任せしたい方へ</span>
+                        
+                        <div class="plan-story-price">
+                            <div class="plan-story-price-lead">前撮りも成人式当日もお支度0円！</div>
+                            <div class="plan-story-price-num">99,800<span>円〜（税込）</span></div>
+                            <div class="plan-story-price-note">※追加料金一切なしのオールインワン。ショール・草履バッグまで付属</div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h4 class="plan-story-checklist-title">プラン内容（追加0円フルサポート）</h4>
+                            <ul class="plan-story-checklist">
+                                <li><strong>振袖200着以上 ＆ 帯・長襦袢・高級小物一式・ショール・草履・バッグ</strong></li>
+                                <li><strong>【前撮り無料】プロ撮影、ヘアメイク、着付け ＆ 記念アルバム</strong></li>
+                                <li><strong>【式当日無料】会場すぐそばでヘアセット、プロメイク、完璧着付け</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.8;">
+                            前撮りから成人式当日のお支度、高級小物まですべて無料のパーフェクトプラン。追加の出費を心配せず、安心で満足のいく特別な一日をトータルプロデュースします。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3プラン比較表セクション -->
+    <section class="lp-comparison-section section-padding">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span>Comparison Table</span>
+                <h2>迷ったらここを見ればOK！3プラン比較</h2>
+            </div>
+
+            <!-- 比較グリッド -->
+            <div class="comparison-grid fade-in-up">
+                <!-- 項目説明コラム（デスクトップ向け） -->
+                <div class="comp-card-desc">
+                    <div class="comp-card-row" style="height: 155px; border-bottom: 1px solid rgba(197, 160, 89, 0.15);"></div>
+                    <div class="comp-card-row">費用重視</div>
+                    <div class="comp-card-row">写真重視</div>
+                    <div class="comp-card-row">安心重視</div>
+                    <div class="comp-card-row">特徴</div>
+                </div>
+
+                <!-- コラム1: シンプル -->
+                <div class="comp-card-column">
+                    <div class="comp-card-header">
+                        <div class="comp-card-title">シンプルプラン</div>
+                        <div class="comp-card-price">49,800<span>円〜</span></div>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">費用重視</span>
+                        <span class="comp-symbol double-circle">◎</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">写真重視</span>
+                        <span class="comp-symbol triangle">▲</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">安心重視</span>
+                        <span class="comp-symbol circle">○</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">特徴</span>
+                        <span class="comp-feature-text">追加は自由にカスタマイズ</span>
+                    </div>
+                    <div class="comp-card-footer">
+                        <a href="#planSimple" class="comp-card-btn">詳細を見る</a>
+                    </div>
+                </div>
+
+                <!-- コラム2: 写真パック -->
+                <div class="comp-card-column highlight">
+                    <div class="comp-card-header">
+                        <div class="comp-card-title">写真パック</div>
+                        <div class="comp-card-price">29,800<span>円</span></div>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">費用重視</span>
+                        <span class="comp-symbol circle">○</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">写真重視</span>
+                        <span class="comp-symbol double-circle">◎</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">安心重視</span>
+                        <span class="comp-symbol circle">○</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">特徴</span>
+                        <span class="comp-feature-text">すべて税込価格で安心</span>
+                    </div>
+                    <div class="comp-card-footer">
+                        <a href="#planPhoto" class="comp-card-btn">詳細を見る</a>
+                    </div>
+                </div>
+
+                <!-- コラム3: フルセット -->
+                <div class="comp-card-column">
+                    <div class="comp-card-header">
+                        <div class="comp-card-title">フルセットプラン</div>
+                        <div class="comp-card-price">99,800<span>円〜</span></div>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">費用重視</span>
+                        <span class="comp-symbol triangle">▲</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">写真重視</span>
+                        <span class="comp-symbol circle">○</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">安心重視</span>
+                        <span class="comp-symbol double-circle">◎</span>
+                    </div>
+                    <div class="comp-card-row">
+                        <span class="comp-card-row-title">特徴</span>
+                        <span class="comp-feature-text">創業100年以上の安心サポート</span>
+                    </div>
+                    <div class="comp-card-footer">
+                        <a href="#planFull" class="comp-card-btn">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 比較まとめビジュアル -->
+            <div class="comp-visual-card fade-in-up">
+                <div class="comp-visual-img-wrap">
+                    <img src="../images/IG2/06.png" alt="3プラン比較カード">
+                </div>
+                <div class="comp-visual-text">
+                    <h3>店頭でもプロと一緒に比較できます</h3>
+                    <p>
+                        「シンプルとフルセット、結果的にどちらが安くなる？」「ママ振の帯だけを差し替えたい」といった個別の疑問にも、だるまやのコーディネーターが親身に対応いたします。<br>無理な勧誘や販売は一切いたしませんのでご安心ください。
+                    </p>
+                    <a href="#cta" class="btn-gold" style="border-radius: 50px; font-size: 1rem; padding: 14px 34px;">店頭で無料相談をする</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQアコーディオンセクション -->
+    <section class="lp-faq-section section-padding">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-left-area fade-in-up">
+                    <div class="section-title" style="text-align: left; margin-bottom: 24px;">
+                        <span>Solving Questions</span>
+                        <h2 style="display: block; padding-bottom: 12px; margin-bottom: 0;">来店前の不安、<br>解決します</h2>
+                    </div>
+                    <p style="font-size: 1.02rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 35px;">
+                        だるまや呉服店は、ご家族皆様に安心して振袖選びをお楽しみいただくため、「見るだけ」「他店との比較だけ」でのご来店も120%歓迎しています。
+                    </p>
+                    <div class="faq-left-visual">
+                        <img src="../images/IG2/07.png" alt="来店前の不安解決しますカード">
+                    </div>
+                </div>
+
+                <div class="faq-wrap fade-in-up">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Q. 試着やプランの相談は本当に無料ですか？</span>
+                            <span class="faq-icon-shape">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、完全無料です！ご予約の上、気になる振袖は何着でもご試着いただけます。コーディネートのご相談やプラン料金のお見積もりだけでも大歓迎ですので、安心してお下見にお越しください。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Q. お母さんの振袖を持ち込む「ママ振」でも大丈夫？</span>
+                            <span class="faq-icon-shape">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                もちろんです！お持ち込みいただいた振袖の状態チェック、サイズ合わせ、帯や小物の差し替えコーディネートを完全に承っております。一部小物の差し替えだけで、お母様の思い出の振袖が驚くほど今風に生まれ変わります。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Q. 常時どれくらいの枚数の振袖がありますか？</span>
+                            <span class="faq-icon-shape">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                だるまや呉服店の店舗には、古典柄からトレンドのモダンデザイン、くすみカラーなど常時200着以上の振袖を豊富にご用意しております。スタッフと一緒にじっくりお気に入りを見つけていただけます。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Q. 成人式のどれくらい前から準備すれば安心？</span>
+                            <span class="faq-icon-shape">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                成人式の約1年半前〜2年前から動き出す方が最も多いです。特に人気の高い前撮りシーズン（春・秋）や、式当日の便利なお支度時間は早くに予約が埋まりやすいため、お早めのご相談をおすすめしております。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="lp-cta-section section-padding" id="cta">
+        <div class="container">
+            <div class="lp-cta-wrap fade-in-up">
+                <span class="cta-period">だるまや呉服店 振袖選びサポート</span>
+                <h2>まずは無料試着・ご相談から</h2>
+                <p>
+                    成人式のプランに迷ったら、まずは店舗で実物の振袖を見ながら気軽にプロに相談してみませんか？<br>
+                    お嬢様の「私らしさ」を引き出す最高のプランを、一緒に笑顔で見つけていきましょう。
+                </p>
+
+                <!-- 特典オファーバナー -->
+                <div class="cta-offer-banner">
+                    <div class="cta-offer-img">
+                        <img src="../images/IG2/08.png" alt="無料試着相談来店予約">
+                    </div>
+                    <div class="cta-offer-text">
+                        <h3>＼ 事前WEB予約限定特典 ／</h3>
+                        <p style="font-weight: 700; color: white; font-size: 1.15rem; margin-bottom: 8px;">
+                            ホームページからの来店予約で<br>【5,000円OFFチケット】プレゼント🎟️
+                        </p>
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">
+                            ※5万円以上の振袖レンタル・ご購入ご成約時にご利用いただけます。
+                        </p>
+                    </div>
+                </div>
+
+                <a href="../index.html#contact" class="btn-gold">
+                    無料来店予約・試着を申し込む
+                </a>
+
+                <div class="sns-btn-wrap">
+                    <a href="https://lin.ee/Po4pNId" target="_blank" class="sns-btn sns-btn-line">
+                        LINEでお気軽に質問・相談する
+                    </a>
+                    <a href="https://www.instagram.com/netkimono/" target="_blank" class="sns-btn sns-btn-ig">
+                        Instagram DMから相談する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フローティング予約ボタン -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="../index.html#contact" class="floating-btn">
+            <div>
+                <span>【無料】店舗来店予約・試着はこちら</span>
+                <span class="floating-btn-sub">事前WEB予約で5,000円OFFチケットプレゼント</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- フッター -->
+    <footer class="lp-footer">
+        <div class="container">
+            <p>&copy; 2026 だるまや呉服店 All Rights Reserved.</p>
+            <p><a href="../index.html">だるまや呉服店 トップページ</a> ｜ <a href="../index.html#contact">お問い合わせ</a></p>
+            <p class="copyright">趣味のきもの だるまや ｜ 大阪市東住吉区駒川5-8-8 ｜ 針中野駅徒歩3分</p>
+        </div>
+    </footer>
+
+    <!-- インタラクション用JavaScript -->
+    <script>
+        // --- プラン診断ゲームの実装 ---
+        const answers = {};
+        
+        function startDiagnosis() {
+            // 初期状態にリセット
+            answers.q1 = null;
+            answers.q2 = null;
+            answers.q3 = null;
+            
+            showStep('diagQ1');
+            document.getElementById('diagProgress').style.display = 'block';
+            updateProgress(33);
+        }
+        
+        function selectAnswer(questionNum, val) {
+            answers['q' + questionNum] = val;
+            
+            if (questionNum === 1) {
+                showStep('diagQ2');
+                updateProgress(66);
+            } else if (questionNum === 2) {
+                showStep('diagQ3');
+                updateProgress(100);
+            } else if (questionNum === 3) {
+                document.getElementById('diagProgress').style.display = 'none';
+                showStep('diagLoading');
+                
+                // 1.2秒のダミーローディングを挟んで結果表示（リッチ感を演出）
+                setTimeout(showResult, 1200);
+            }
+        }
+        
+        function showStep(stepId) {
+            document.querySelectorAll('.diag-step').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById(stepId).classList.add('active');
+        }
+        
+        function updateProgress(percent) {
+            document.getElementById('diagProgressFill').style.width = percent + '%';
+        }
+        
+        function showResult() {
+            let recommendedPlan = "";
+            let planDesc = "";
+            let targetId = "";
+            
+            // 診断ロジック
+            if (answers.q1 === 'A' && answers.q3 === 'A') {
+                // 式当日に出席し、支度をすべて任せたい -> フルセットプラン
+                recommendedPlan = "フルセットプラン";
+                planDesc = "前撮りから成人式当日のお支度まで全てコミコミ！追加費用を気にせず、プロに全部お任せして最高の一日を迎えたいあなたに最適です。常時200着以上から選べる安心のオールインワンです。";
+                targetId = "planFull";
+            } else if (answers.q1 === 'B' && answers.q2 === 'A') {
+                // 式には出席しないが、写真は綺麗に残したい -> 写真パック
+                recommendedPlan = "写真パック";
+                planDesc = "式には出ないけれど、二十歳の思い出に写真だけは本格的に残したいあなたにピッタリ！衣装からヘアメイク、高級見開きアルバム、さらに撮影画像データまで全てコミコミ29,800円の安心プランです。";
+                targetId = "planPhoto";
+            } else {
+                // 費用を抑えたい、必要なものだけを組み合わせたい -> シンプルプラン
+                recommendedPlan = "シンプルプラン";
+                planDesc = "衣装だけをリーズナブルに借りて、当日のヘアメイクや撮影は自分で手配したり自由に組み合わせたいあなたにおすすめ！49,800円（税込）からのスマートなチョイスが可能です。";
+                targetId = "planSimple";
+            }
+            
+            document.getElementById('resultPlanName').innerText = recommendedPlan;
+            document.getElementById('resultPlanDesc').innerText = planDesc;
+            
+            // ジャンプ先リンクを設定
+            const jumpLink = document.getElementById('resultJumpLink');
+            jumpLink.href = '#' + targetId;
+            jumpLink.innerText = recommendedPlan + "の詳細へ進む";
+            
+            showStep('diagResult');
+        }
+
+        // 診断結果から詳細セクションに飛ぶときのスクロール微調整
+        function resetDiagScroll() {
+            // スムーズスクロール完了のために少し遅延を入れることもできます
+        }
+
+        // --- FAQアコーディオンの実装 ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                
+                // 他のすべてのアクティブなFAQを閉じる
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                
+                // クリックされたFAQのトグル
+                item.classList.toggle('active');
+                const answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+
+        // --- スクロールフェードインアニメーション ---
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // 一度フェードインしたら監視解除
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // --- ヒーロー通過後にフローティングボタンを表示 ---
+        const floatingCta = document.getElementById('floatingCta');
+        const heroSection = document.querySelector('.lp-hero');
+
+        window.addEventListener('scroll', () => {
+            const heroHeight = heroSection.offsetHeight;
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > heroHeight - 120) {
+                floatingCta.classList.add('show');
+            } else {
+                floatingCta.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
