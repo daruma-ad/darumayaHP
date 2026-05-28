@@ -136,35 +136,34 @@
             <span class="news-read-more">詳しく見る</span>
           </div>
         </a>
+      </div>
 
-
-
-        <!-- Card: 卒業袴レンタル -->
-        <a href="pages/campaign-hakama.html" class="news-card is-hidden">
-          <div class="news-card-image">
-            <img src="images/campaign-hakama.png" alt="卒業袴レンタル 予約受付中" width="600" height="400" loading="lazy">
-            <span class="news-badge campaign">キャンペーン</span>
-          </div>
-          <div class="news-card-body">
-            <h3>卒業袴レンタル 予約受付中</h3>
-            <p>学生生活の集大成を華やかに。新作袴からブランド袴まで豊富に取り揃えています。19,800円より。</p>
-            <span class="news-read-more">詳しく見る</span>
-          </div>
-        </a>
-
-
-        <!-- Card 4: 七五三フェア (HIDDEN) -->
-        <a href="pages/campaign-shichigosan.html" class="news-card is-hidden">
-          <div class="news-card-image">
-            <img src="images/campaign-shichigosan.png" alt="七五三 着物レンタルフェア" width="600" height="400" loading="lazy">
-            <span class="news-badge campaign">キャンペーン</span>
-          </div>
-          <div class="news-card-body">
-            <h3>七五三 着物レンタルフェア</h3>
-            <p>お子様の大切な節目を彩る七五三着物。豊富なラインナップからお気に入りの一着をお選びいただけます。</p>
-            <span class="news-read-more">詳しく見る</span>
-          </div>
-        </a>
+      <!-- サブ文字リンク（和モダンリスト） -->
+      <div class="news-sub-list">
+        <h4 class="news-sub-title">その他のお知らせ・キャンペーン</h4>
+        <div class="news-sub-items">
+          <a href="pages/campaign-hakama.html" class="news-sub-item">
+            <div class="news-sub-meta">
+              <span class="news-sub-badge campaign">キャンペーン</span>
+            </div>
+            <div class="news-sub-text">卒業袴レンタル 予約受付中</div>
+            <span class="news-sub-arrow">→</span>
+          </a>
+          <a href="pages/campaign-shichigosan.html" class="news-sub-item">
+            <div class="news-sub-meta">
+              <span class="news-sub-badge campaign">キャンペーン</span>
+            </div>
+            <div class="news-sub-text">七五三 着物レンタル ＆ ご購入・仕立て直しご相談会</div>
+            <span class="news-sub-arrow">→</span>
+          </a>
+          <a href="pages/info-spring-maintenance.html" class="news-sub-item">
+            <div class="news-sub-meta">
+              <span class="news-sub-badge info">お知らせ</span>
+            </div>
+            <div class="news-sub-text">春の着物メンテナンスキャンペーン特別価格のご案内</div>
+            <span class="news-sub-arrow">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -475,17 +474,6 @@
       }
     });
 
-    // --- News Section Limit ---
-    // 有効な（.is-hidden でない）カードのうち、最初の3つだけを表示する
-    const limitNewsCards = () => {
-      const newsCards = document.querySelectorAll('.news-grid .news-card:not(.is-hidden)');
-      newsCards.forEach((card, index) => {
-        if (index >= 3) {
-          card.style.display = 'none';
-        }
-      });
-    };
-    limitNewsCards();
 
     // Form submission handler for Formspree
     const form = document.getElementById('contact-form');
