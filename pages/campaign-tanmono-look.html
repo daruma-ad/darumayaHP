@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="だるまや反物祭り・生地祭り開催！6月5日(金)〜8日(月)の4日間限定。正絹反物が3,000円から、大島紬や帯の1万円均一など在庫一掃の大ご奉仕！大阪・駒川商店街のだるまや呉服店。">
+    <title>だるまや反物祭り＆生地祭り（ルックブック版） | だるまや呉服店</title>
+    <link rel="stylesheet" href="../pages.css">
+    <style>
+        /* ==========================================================
+           【案2：ルックブック風】特設限定スタイル (マルチスライダー)
+           ========================================================== */
+        
+        /* カルーセル外側のビューポート（切り抜き窓） */
+        .tanmono-look-carousel {
+            position: relative;
+            width: 100%;
+            margin: 40px auto;
+            overflow: hidden;
+            padding: 10px 0 30px;
+        }
+
+        /* スライダートラック（横一列に並べる） */
+        .tanmono-look-track {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+        }
+
+        /* 各カード (PC時は3枚表示、スマホ時は1枚表示) */
+        .tanmono-look-card {
+            flex: 0 0 calc(33.333% - 20px); /* PC時は3等分 (隙間30px分を考慮) */
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(26, 47, 74, 0.05);
+            border: 1px solid rgba(26, 47, 74, 0.04);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: var(--transition-base);
+        }
+
+        .tanmono-look-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(26, 47, 74, 0.1);
+        }
+
+        /* アスペクト比 3:4 固定の画像コンテナ */
+        .tanmono-look-image {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            margin-bottom: 20px;
+        }
+
+        .tanmono-look-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .tanmono-look-card:hover .tanmono-look-image img {
+            transform: scale(1.06);
+        }
+
+        /* カードのテキスト部分 */
+        .tanmono-look-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tanmono-look-badge {
+            align-self: flex-start;
+            background: rgba(142, 35, 35, 0.06);
+            color: var(--color-accent);
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .tanmono-look-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .tanmono-look-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* 左右操作矢印 */
+        .tanmono-look-prev,
+        .tanmono-look-next {
+            position: absolute;
+            top: 40%; /* 画像の高さ付近に配置 */
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--color-navy);
+            border: 1px solid rgba(26, 47, 74, 0.1);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition-base);
+        }
+
+        .tanmono-look-prev:hover,
+        .tanmono-look-next:hover {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .tanmono-look-prev {
+            left: -23px; /* 少しはみ出させて配置 */
+        }
+
+        .tanmono-look-next {
+            right: -23px;
+        }
+
+        /* ページネーション（ドット） */
+        .tanmono-look-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .tanmono-look-dots .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #eae5db;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .tanmono-look-dots .dot.active {
+            background: var(--color-accent);
+            transform: scale(1.2);
+            box-shadow: 0 0 0 3px rgba(142, 35, 35, 0.15);
+        }
+
+        /* 1万円均一用の特設スタイル */
+        .tanmono-ichiman-section {
+            background: #fdfbf7;
+            border-radius: 30px;
+            padding: 50px 40px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            box-shadow: 0 15px 50px rgba(42, 74, 106, 0.03);
+            margin: 45px 0;
+        }
+
+        .tanmono-ichiman-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .tanmono-ichiman-card {
+            background: white;
+            border: 2px solid #eae5db;
+            border-radius: 18px;
+            padding: 35px 20px 25px;
+            text-align: center;
+            position: relative;
+            transition: var(--transition-base);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.01);
+        }
+
+        .tanmono-ichiman-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--color-accent);
+            box-shadow: 0 15px 40px rgba(142, 35, 35, 0.08);
+        }
+
+        .tanmono-ichiman-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            color: white;
+            padding: 5px 22px;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(142, 35, 35, 0.25);
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+
+        .tanmono-ichiman-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            font-family: var(--font-heading);
+            margin: 15px 0 10px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        .tanmono-ichiman-price span {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-left: 2px;
+            color: var(--color-text-light);
+        }
+
+        .tanmono-ichiman-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .tanmono-ichiman-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+        }
+
+        .tanmono-banner {
+            background: rgba(142, 35, 35, 0.03);
+            border-left: 4px solid var(--color-accent);
+            padding: 25px 30px;
+            border-radius: 0 15px 15px 0;
+            margin: 40px 0;
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--color-navy);
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 991px) {
+            .tanmono-look-card {
+                flex: 0 0 calc(50% - 15px); /* タブレット時は2枚表示 */
+            }
+            .tanmono-look-prev { left: -10px; }
+            .tanmono-look-next { right: -10px; }
+        }
+
+        @media (max-width: 600px) {
+            .tanmono-look-card {
+                flex: 0 0 100%; /* スマホ時は1枚表示 */
+            }
+            .tanmono-look-prev { left: 5px; }
+            .tanmono-look-next { right: 5px; }
+        }
+
+        @media (max-width: 768px) {
+            .tanmono-ichiman-section {
+                padding: 35px 20px;
+                margin: 30px 0;
+            }
+
+            .tanmono-ichiman-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .tanmono-banner {
+                padding: 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <header class="lp-topbar">
+        <div class="container">
+            <a href="../index.html" class="lp-topbar-logo">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span>だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-topbar-back">トップへ戻る</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="lp-hero">
+        <div class="lp-hero-bg">
+            <img src="../images/kiji/hero_tanmono.jpg" alt="だるまや 反物祭り＆生地祭り" width="1200" height="800">
+        </div>
+        <div class="lp-hero-content">
+            <span class="lp-hero-badge campaign">期間限定：6/5(金) 〜 6/8(月)</span>
+            <h1>だるまや 反物祭り<br><span style="font-size: 0.8em; opacity: 0.95;">【同時開催】生地祭り</span></h1>
+            <p class="lp-hero-subtitle">
+                在庫一掃の大ご奉仕！正絹反物がなんと【3,000円から】！<br>
+                普段なかなか手が出ない逸品反物や、手芸・ハンドメイド用の生地が「お祭り価格」で大集合✨
+            </p>
+            <p class="lp-hero-price" style="font-size: 1.15rem; background: rgba(0,0,0,0.3); padding: 10px 25px; border-radius: 30px; display: inline-block;">
+                驚愕の1万円均一コーナー ＆ 掘り出し物は完全早い者勝ち！
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="lp-section">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <div class="lp-section-title">
+                <h2>在庫一掃の大ご奉仕！宝探しへようこそ</h2>
+                <p>年に一度の特別大売出しをだるまや店頭にて開催いたします</p>
+            </div>
+            <p style="font-size: 1.05rem; line-height: 2.0; color: var(--color-text); text-align: left; margin-bottom: 20px;">
+                いつも「だるまや呉服店」をご愛顧いただき、誠にありがとうございます。<br>
+                この度、日頃の感謝を込めまして、だるまや店頭にて大ご奉仕の「反物祭り」＆「生地祭り」を同時開催いたします！
+            </p>
+            <p style="font-size: 1.05rem; line-height: 2.0; color: var(--color-text); text-align: left;">
+                本格的なお着物のお仕立て用にはもちろん、贅沢な「着物リメイク」や「ハンドメイド手芸」の素材としても大活躍する逸品反物や上質な生地が勢揃い。<br>
+                <strong>「良いものを、驚きの価格で手に入れる」</strong>絶好の4日間です。掘り出し物はすべて早い者勝ちですので、ぜひ店頭でお手にとって、あなただけの宝探しをお楽しみください！
+            </p>
+        </div>
+    </section>
+
+    <!-- ルックブック風（マルチカード・スライダー）セクション -->
+    <section class="lp-section alt-bg" style="padding-top: 50px; padding-bottom: 50px; border-top: 1px solid rgba(26,47,74,0.05);">
+        <div class="container" style="max-width: 1100px;">
+            <div class="lp-section-title">
+                <h2>反物・生地祭り コレクションカタログ</h2>
+                <p>縦長お写真の比率を崩さず、お洒落なルックブック（カタログ）のように並べてご紹介します</p>
+            </div>
+
+            <!-- ルックブック風カルーセル本体 -->
+            <div class="tanmono-look-carousel">
+                <div class="tanmono-look-track" id="tanmono-look-track">
+                    
+                    <!-- Card 1 (正絹反物) -->
+                    <div class="tanmono-look-card">
+                        <div class="tanmono-look-image">
+                            <img src="../images/kiji/kiji_1.jpg" alt="正絹反物 3,000円から" loading="lazy">
+                        </div>
+                        <div class="tanmono-look-body">
+                            <span class="tanmono-look-badge">正絹反物大放出</span>
+                            <h3>【メイン】正絹反物 3,000円〜</h3>
+                            <p>正絹ならではの上品な光沢としなやかな肌触り。在庫一掃の3,000円からという破格価格で大放出します。お仕立て用や贅沢なリメイク素材に。</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (生地祭り) -->
+                    <div class="tanmono-look-card">
+                        <div class="tanmono-look-image">
+                            <img src="../images/kiji/kiji_2.jpg" alt="高級ウール・定番生地" loading="lazy">
+                        </div>
+                        <div class="tanmono-look-body">
+                            <span class="tanmono-look-badge">手芸・ハンドメイド</span>
+                            <h3>生地祭り（ウール・綿・ポリ）</h3>
+                            <p>インポートの高級ウールから人気の綿素材まで大集合！オリジナルバッグ、小物、お洒落なお洋服作りなど、ハンドメイドに最適な生地がお祭り特価。</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (1万円均一) -->
+                    <div class="tanmono-look-card">
+                        <div class="tanmono-look-image">
+                            <img src="../images/kiji/kiji_3.jpg" alt="高級名古屋帯・大島紬1万円均一" loading="lazy">
+                        </div>
+                        <div class="tanmono-look-body">
+                            <span class="tanmono-look-badge">大注目1万円均一</span>
+                            <h3>高級名古屋帯 ＆ 大島紬</h3>
+                            <p>西陣袋帯や名古屋帯、さらには新品大島紬までまさかの「1万円均一」に大放出！呉服店としては考えられない衝撃のポッキリ価格。早い者勝ちです。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 左右操作ボタン -->
+                <button class="tanmono-look-prev" id="look-prev-btn" aria-label="前へ">◀</button>
+                <button class="tanmono-look-next" id="look-next-btn" aria-label="次へ">▶</button>
+            </div>
+
+            <!-- ページネーション（インジケータードット） -->
+            <div class="tanmono-look-dots" id="tanmono-look-dots">
+                <!-- JSで動的に生成、または手動定義 -->
+                <span class="dot active" onclick="jumpToSlide(0)"></span>
+                <span class="dot" onclick="jumpToSlide(1)"></span>
+                <span class="dot" onclick="jumpToSlide(2)"></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Ichiman Section (1万円均一) -->
+    <section class="lp-section">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>【超目玉】驚愕の1万円均一コーナー</h2>
+                <p>普段では絶対にあり得ない、新品反物・高級帯がまさかの1万円ポッキリ！</p>
+            </div>
+
+            <div class="tanmono-ichiman-section" style="background: white; border: 1px solid rgba(26,47,74,0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+                <div class="lp-detail-block" style="margin-bottom: 0;">
+                    <div class="lp-detail-image">
+                        <img src="../images/kiji/kiji_3.jpg" alt="高級反物・帯 均一セール" width="600" height="400">
+                    </div>
+                    <div class="lp-detail-text">
+                        <h3>仕立ててもリメイクでも贅沢な選択</h3>
+                        <p>
+                            皆様の着物ライフやハンドメイド活動を応援するために、今回の目玉として「1万円均一（税込11,000円）コーナー」を特別に設置いたしました。
+                        </p>
+                        <p>
+                            普段はなかなか手が出せない西陣高級帯や新品の大島紬反物まで、このお祭り期間中だけすべてポッキリ価格で大放出。お早めのご来店をおすすめいたします。
+                        </p>
+                        
+                        <div class="tanmono-ichiman-grid">
+                            <!-- Card 1 -->
+                            <div class="tanmono-ichiman-card">
+                                <span class="tanmono-ichiman-badge">新品大島紬</span>
+                                <div class="tanmono-ichiman-price">10,000<span>円〜</span></div>
+                                <h3>大島紬反物</h3>
+                                <p>まさかの大島紬が1万円から！極上の泥染めや美しい絣織りの逸品を大放出。</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="tanmono-ichiman-card">
+                                <span class="tanmono-ichiman-badge">新品正絹小紋</span>
+                                <div class="tanmono-ichiman-price">10,000<span>円〜</span></div>
+                                <h3>小紋生地</h3>
+                                <p>驚きの正絹小紋が1万円から。普段使いやお洒落着にぴったりの華やかな染めと織り。</p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="tanmono-ichiman-card">
+                                <span class="tanmono-ichiman-badge">新品正絹附下</span>
+                                <div class="tanmono-ichiman-price">10,000<span>円〜</span></div>
+                                <h3>附下（つけさげ）生地</h3>
+                                <p>セミフォーマルに大活躍の正絹附下反物も、破格の1万円からご提供いたします。</p>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="tanmono-ichiman-card">
+                                <span class="tanmono-ichiman-badge">西陣袋帯・名古屋帯</span>
+                                <div class="tanmono-ichiman-price">10,000<span>円〜</span></div>
+                                <h3>各種高級帯</h3>
+                                <p>コーディネートを引き締める、上品な西陣織の袋帯や名古屋帯がなんと1万円から！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details/Access Section -->
+    <section class="lp-section alt-bg">
+        <div class="container" style="max-width: 900px;">
+            <div class="lp-section-title">
+                <h2>開催概要・店舗情報</h2>
+                <p>皆様のお越しを、だるまや店頭にて心よりお待ちしております</p>
+            </div>
+
+            <div style="background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); padding: 40px; border: 1px solid #eee;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f0ede8;">
+                            <th style="padding: 20px 10px; width: 120px; color: var(--color-navy); font-weight: bold; vertical-align: top;">📅 開催日時</th>
+                            <td style="padding: 20px 10px; line-height: 1.7; color: var(--color-text);">
+                                <strong>2026年6月5日(金) 〜 6月8日(月)</strong><br>
+                                営業時間：10:00 〜 18:30 （4日間限定開催）
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0ede8;">
+                            <th style="padding: 20px 10px; color: var(--color-navy); font-weight: bold; vertical-align: top;">📍 開催場所</th>
+                            <td style="padding: 20px 10px; line-height: 1.7; color: var(--color-text);">
+                                <strong>だるまや店頭</strong><br>
+                                〒546-0043 大阪府大阪市東住吉区駒川5-8-8<br>
+                                （駒川商店街内 みなみ通り商店会）
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0ede8;">
+                            <th style="padding: 20px 10px; color: var(--color-navy); font-weight: bold; vertical-align: top;">🚃 アクセス</th>
+                            <td style="padding: 20px 10px; line-height: 1.7; color: var(--color-text);">
+                                近鉄南大阪線「針中野駅」より徒歩2分<br>
+                                大阪メトロ谷町線「駒川中野駅」より徒歩5分
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 20px 10px; color: var(--color-navy); font-weight: bold; vertical-align: top;">📞 お問い合わせ</th>
+                            <td style="padding: 20px 10px; line-height: 1.7; color: var(--color-text);">
+                                <a href="tel:06-6692-2239" style="font-weight: bold; font-size: 1.1rem; color: var(--color-accent);">
+                                    06-6692-2239
+                                </a>（だるまや呉服店）
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="lp-cta">
+        <div class="container">
+            <h2>掘り出し物は完全早い者勝ち！</h2>
+            <p>
+                お気に入りのお色・柄は、出会ったその瞬間がチャンスです。<br>
+                ぜひ「だるまや」へお気に入りの宝探しに来てくださいね！
+            </p>
+            <div class="lp-cta-buttons">
+                <a href="tel:06-6692-2239" class="lp-btn lp-btn-white">
+                    📞 電話でお問い合わせ
+                </a>
+                <a href="../index.html#contact" class="lp-btn lp-btn-outline">
+                    店舗へのお問い合わせ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+        <div class="container">
+            <p>&copy; 2026 だるまや呉服店 All Rights Reserved. ｜ <a href="../index.html">トップページへ戻る</a></p>
+        </div>
+    </footer>
+
+    <!-- ==========================================================
+         JavaScript カルーセル制御処理 (ルックブック・マルチスライド)
+         ========================================================== -->
+    <script>
+        const track = document.getElementById("tanmono-look-track");
+        const cards = document.getElementsByClassName("tanmono-look-card");
+        const prevBtn = document.getElementById("look-prev-btn");
+        const nextBtn = document.getElementById("look-next-btn");
+        const dots = document.getElementsByClassName("dot");
+        
+        let currentIndex = 0;
+        let maxIndex = 0; // スライド可能な最大インデックス
+
+        // 表示枚数とレスポンシブ幅に応じた最大インデックスの更新
+        function updateCarouselSettings() {
+            const width = window.innerWidth;
+            let visibleCards = 3; // デフォルト3枚 (PC)
+            
+            if (width <= 600) {
+                visibleCards = 1; // スマホ1枚
+            } else if (width <= 991) {
+                visibleCards = 2; // タブレット2枚
+            }
+            
+            maxIndex = Math.max(0, cards.length - visibleCards);
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+            
+            // ドットの表示/非表示制御 (スマホ・タブレットはスライド表示が必須なのでドットを表示)
+            const dotsContainer = document.getElementById("tanmono-look-dots");
+            if (maxIndex === 0) {
+                dotsContainer.style.display = "none";
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            } else {
+                dotsContainer.style.display = "flex";
+                prevBtn.style.display = "flex";
+                nextBtn.style.display = "flex";
+                
+                // 動的にドットの有効数を制御
+                for (let i = 0; i < dots.length; i++) {
+                    if (i <= maxIndex) {
+                        dots[i].style.display = "inline-block";
+                    } else {
+                        dots[i].style.display = "none";
+                    }
+                }
+            }
+            
+            moveToSlide(currentIndex);
+        }
+
+        // スライドの移動処理
+        function moveToSlide(index) {
+            if (index < 0) index = 0;
+            if (index > maxIndex) index = maxIndex;
+            
+            currentIndex = index;
+            
+            // 移動比率の計算
+            let cardWidth = cards[0].offsetWidth;
+            let gap = 30; // CSSの gap と一致させる
+            
+            let moveAmount = currentIndex * (cardWidth + gap);
+            track.style.transform = `translateX(-${moveAmount}px)`;
+            
+            // アクティブなドットの更新
+            for (let i = 0; i < dots.length; i++) {
+                if (dots[i]) {
+                    dots[i].classList.remove("active");
+                }
+            }
+            if (dots[currentIndex]) {
+                dots[currentIndex].classList.add("active");
+            }
+        }
+
+        // 前へ / 次へボタンのイベント
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                moveToSlide(currentIndex - 1);
+            } else {
+                moveToSlide(maxIndex); // ループ処理
+            }
+        });
+
+        nextBtn.addEventListener("click", () => {
+            if (currentIndex < maxIndex) {
+                moveToSlide(currentIndex + 1);
+            } else {
+                moveToSlide(0); // ループ処理
+            }
+        });
+
+        // ドットの直接クリック
+        function jumpToSlide(index) {
+            moveToSlide(index);
+        }
+
+        // リサイズ時の自動調整
+        window.addEventListener("resize", updateCarouselSettings);
+        
+        // 初期起動
+        // カードの幅計算がCSSレンダリング後に行われるようわずかに遅らせて実行
+        setTimeout(updateCarouselSettings, 100);
+    </script>
+</body>
+
+</html>
