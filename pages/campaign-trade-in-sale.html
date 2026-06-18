@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="【6/20〜6/29期間限定】タンスの着物が最大25,000円分に！お買い物金額に応じてお得になる「きもの下取りセール」を開催。古くてもシミがあっても他店購入でもOK！だるまや呉服店。">
+    <title>きもの下取りセール | だるまや呉服店</title>
+    <link rel="stylesheet" href="../pages.css">
+    <style>
+        /* カルーセル・ストリップ（横スクロール）スタイル */
+        .carousel-strip {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px 4px 28px;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-strip img {
+            flex: 0 0 min(78vw, 360px);
+            width: min(78vw, 360px);
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+            scroll-snap-align: start;
+        }
+        .carousel-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+        .carousel-strip::-webkit-scrollbar-thumb {
+            background-color: var(--color-gold);
+            border-radius: 4px;
+        }
+
+        /* カスタムリストスタイル */
+        .custom-check-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .custom-check-list li {
+            position: relative;
+            padding-left: 1.8em;
+            margin-bottom: 0.8em;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .custom-check-list li::before {
+            content: "✓";
+            color: var(--color-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* アコーディオンFAQスタイル */
+        .faq-details {
+            background: white;
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            border: 1px solid #f0ede8;
+            transition: var(--transition-base);
+        }
+        .faq-details:hover {
+            border-color: var(--color-gold-light);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        .faq-details summary {
+            font-weight: 700;
+            color: var(--color-navy);
+            font-size: 1.1rem;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-details summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-details summary::after {
+            content: "＋";
+            font-size: 1.1rem;
+            color: var(--color-gold);
+            transition: transform 0.3s;
+        }
+        .faq-details[open] summary::after {
+            content: "－";
+        }
+        .faq-details p {
+            margin-top: 12px;
+            color: var(--color-text);
+            line-height: 1.8;
+            border-top: 1px solid #f0ede8;
+            padding-top: 12px;
+        }
+
+        /* ヒーローエリアのカスタマイズ */
+        .lp-hero {
+            min-height: 85vh;
+            background: #fdfbf7;
+            padding-top: 90px;
+        }
+        .lp-hero-bg {
+            left: auto;
+            width: min(38vw, 440px);
+            aspect-ratio: 4 / 5;
+            right: max(24px, calc((100vw - 1200px) / 2));
+            top: 110px;
+            bottom: auto;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.15);
+        }
+        .lp-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fff;
+            filter: none;
+        }
+        .lp-hero-bg::after {
+            display: none;
+        }
+        .lp-hero-content {
+            width: min(1200px, 100%);
+            text-align: left;
+            padding-right: min(46vw, 540px);
+            color: var(--color-text);
+        }
+        .lp-hero-content h1 {
+            color: var(--color-navy);
+            text-shadow: none;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            line-height: 1.35;
+        }
+        .lp-hero-content .lp-hero-subtitle {
+            color: var(--color-text-light);
+            text-shadow: none;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1.1rem;
+        }
+        .lp-hero-period-badge {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* レイアウト微調整 */
+        .lp-detail-block {
+            grid-template-columns: minmax(280px, 440px) minmax(0, 1fr);
+            gap: clamp(28px, 5vw, 70px);
+        }
+        .lp-detail-block.reverse {
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+        }
+        .lp-detail-image {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+        }
+        .lp-detail-image img {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 5;
+            object-fit: contain !important;
+            background: #fff;
+        }
+
+        /* 料金プランテーブル */
+        .price-compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .price-compare-table th,
+        .price-compare-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #f0ede8;
+        }
+        .price-compare-table th {
+            background-color: var(--color-navy);
+            color: white;
+            font-weight: 700;
+        }
+        .price-compare-table tr:last-child td {
+            border-bottom: none;
+        }
+        .price-compare-table td:first-child {
+            font-weight: 700;
+            color: var(--color-navy);
+            background-color: rgba(26, 47, 74, 0.02);
+            width: 25%;
+        }
+        .highlight-col {
+            background-color: rgba(142, 35, 35, 0.03);
+            font-weight: 700;
+        }
+        .highlight-text-accent {
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+            .lp-hero {
+                display: block;
+                padding: 100px 16px 42px;
+            }
+            .lp-hero-bg {
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                width: min(100%, 400px);
+                margin: 0 auto 28px;
+                z-index: 0;
+            }
+            .lp-hero-content {
+                padding: 0;
+                text-align: center;
+            }
+            .lp-hero-content .lp-hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .lp-detail-block,
+            .lp-detail-block.reverse {
+                grid-template-columns: 1fr;
+            }
+            .lp-detail-image {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .price-compare-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header class="lp-topbar">
+        <div class="container">
+            <a href="../index.html" class="lp-topbar-logo" id="topbar-logo-link">
+                <img src="../images/darumayan_parts.png" alt="だるまや呉服店">
+                <span>だるまや呉服店</span>
+            </a>
+            <a href="../index.html" class="lp-topbar-back" id="topbar-back-link">トップへ戻る</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="lp-hero">
+        <div class="lp-hero-bg">
+            <img src="../images/trade-in/01-cover.png" alt="タンスの着物が最大25,000円分に！ きもの下取りセール 期間限定 6/20〜6/29">
+        </div>
+        <div class="lp-hero-content">
+            <span class="lp-hero-badge campaign">期間限定キャンペーン</span>
+            <div class="lp-hero-period-badge">6/20(土) 〜 6/29(月)</div>
+            <h1>タンスの着物が<br>最大25,000円分に！</h1>
+            <p class="lp-hero-subtitle">
+                眠ったままの着物を、新しい一着の軍資金に。<br>
+                お買い物金額に応じてお得になる「きもの下取りセール」を開催します。
+            </p>
+            <div style="margin-top: 30px;">
+                <a href="#reserve" class="lp-btn lp-btn-white" style="margin-right: 15px; margin-bottom: 15px;" id="hero-reserve-btn">無料で来店予約をする</a>
+                <a href="#gallery" class="lp-btn lp-btn-outline" style="color: var(--color-navy); border-color: var(--color-navy);" id="hero-gallery-btn">カルーセルを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empathy Section -->
+    <section class="lp-section alt-bg" id="empathy">
+        <div class="container">
+            <div class="lp-detail-block">
+                <div class="lp-detail-image">
+                    <img src="../images/trade-in/02-empathy.png" alt="眠ったままの着物、ありませんか？">
+                </div>
+                <div class="lp-detail-text">
+                    <p class="highlight-text-accent" style="font-size: 1.1rem; margin-bottom: 10px;">思い出の詰まったお着物だからこそ</p>
+                    <h3 style="font-size: 1.8rem; line-height: 1.4;">タンスに眠ったままになっていませんか？</h3>
+                    <ul class="custom-check-list" style="margin-top: 20px;">
+                        <li>もう何年も着る機会がない</li>
+                        <li>親から譲り受けたが、古くて手放しにくい</li>
+                        <li>シミや汚れ、カビがあってどうしようもない</li>
+                        <li>ただ捨ててしまうのはもったいないし、忍びない</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 1rem; color: var(--color-text-light);">
+                        「捨てるのは心が痛む」「買取店に持って行ったら数十円にしかならずガッカリした」というお悩みをよくお聞きします。だるまやでは、そんなお着物を大切な資源・想い出として、新しくお気に入りを見つけるための資金としてお引替えします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="lp-section" id="pricing">
+        <div class="container">
+            <div class="lp-detail-block reverse">
+                <div class="lp-detail-image">
+                    <img src="../images/trade-in/03-pricing.png" alt="お買い物金額に応じて下取り額がアップ！">
+                </div>
+                <div class="lp-detail-text">
+                    <p class="highlight-text-accent" style="font-size: 1.1rem; margin-bottom: 10px;">買えば買うほどお得になる下取り還元</p>
+                    <h3 style="font-size: 1.8rem; line-height: 1.4;">お買い物金額に応じて下取り額アップ！</h3>
+                    <p style="margin-top: 15px;">お持ち込みいただいたお着物・帯は、お買い物金額（税込）に応じて以下のようにその場でお値引きに充当させていただきます。</p>
+                    
+                    <ul class="custom-check-list" style="margin-top: 20px;">
+                        <li><strong>税込 5万円以上</strong>のご購入で ➔ <span class="highlight-text-accent" style="font-size: 1.3rem;">5,000円引き</span>（1点下取り）</li>
+                        <li><strong>税込 10万円以上</strong>のご購入で ➔ <span class="highlight-text-accent" style="font-size: 1.3rem;">10,000円引き</span>（1点下取り）</li>
+                        <li><strong>税込 20万円以上</strong>のご購入で ➔ <span class="highlight-text-accent" style="font-size: 1.3rem;">25,000円引き</span>（2点下取りまで）</li>
+                    </ul>
+                    
+                    <div style="margin-top: 25px; padding: 15px 20px; background-color: #fcfaf6; border-left: 4px solid var(--color-gold); border-radius: 4px;">
+                        <span class="highlight-text-accent" style="font-weight: bold;">【期間限定】6月20日(土) 〜 6月29日(月)</span><br>
+                        <small style="color: var(--color-text-light);">※和装小物・襦袢・喪服は下取り対象外となります。他の割引サービスとの併用はできません。</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="lp-section alt-bg" id="products">
+        <div class="container">
+            <div class="lp-detail-block">
+                <div class="lp-detail-image">
+                    <img src="../images/trade-in/04-products.png" alt="着物だけでなく、帯のお買い替えにも。">
+                </div>
+                <div class="lp-detail-text">
+                    <p class="highlight-text-accent" style="font-size: 1.1rem; margin-bottom: 10px;">帯や小物、コーディネートの新調に</p>
+                    <h3 style="font-size: 1.8rem; line-height: 1.4;">着物だけでなく、帯のお買い替えにも。</h3>
+                    <p style="margin-top: 15px;">
+                        下取り金額は、新しいお着物だけでなく、さまざまな和装アイテムのお買い替えにご利用いただけます。
+                    </p>
+                    <ul class="custom-check-list" style="margin-top: 20px;">
+                        <li><strong>税込5万円以上のまとめ買い：</strong> 草履・バッグや洗える着物、小物の新調に。</li>
+                        <li><strong>税込10万円以上のお買い替え：</strong> 新しいお着物や、コーディネートの主役となる帯の購入に。</li>
+                        <li><strong>税込20万円以上のトータルコーディネート：</strong> 着物と帯のセット購入や、格調高いフォーマル一式に。</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: var(--color-text-light);">
+                        「帯だけ新しくしたい」「草履やバッグも新調したい」といったご要望にも柔軟にお応えします。ぜひお気軽にご相談ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="lp-section" id="eligibility">
+        <div class="container">
+            <div class="lp-detail-block reverse">
+                <div class="lp-detail-image">
+                    <img src="../images/trade-in/05-eligibility.png" alt="古くても、シミがあってもOK！">
+                </div>
+                <div class="lp-detail-text">
+                    <p class="highlight-text-accent" style="font-size: 1.1rem; margin-bottom: 10px;">他店購入・状態問わず大歓迎</p>
+                    <h3 style="font-size: 1.8rem; line-height: 1.4;">古くても、シミがあってもOK！</h3>
+                    <p style="margin-top: 15px;">「こんな着物でも下取りに出していいの？」と不安に思う必要はありません。以下のような状態のお着物でも、すべて価値としてお引き受けします。</p>
+                    
+                    <ul class="custom-check-list" style="margin-top: 20px;">
+                        <li><strong>他店で購入したものもOK</strong>（購入店舗や作家は問いません）</li>
+                        <li><strong>年代が古い着物もOK</strong>（昭和レトロなお着物からアンティークまで）</li>
+                        <li><strong>シミや汚れ、シワがあってもOK</strong></li>
+                        <li><strong>着物・帯が下取り対象</strong></li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px; font-weight: bold; color: var(--color-navy);">
+                        「これでも大丈夫かな？」と悩む前に、まずはタンスの中身をお気軽にだるまやへお持ちください。呉服のプロが丁寧にお出迎えいたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="lp-section alt-bg" id="comparison">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>一般的な買取店と何が違うの？</h2>
+                <p>だるまや下取りセールならではのメリット</p>
+            </div>
+            
+            <table class="price-compare-table">
+                <thead>
+                    <tr>
+                        <th>比較項目</th>
+                        <th>一般的な買取店・リサイクルショップ</th>
+                        <th class="highlight-col">だるまやの下取りセール</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>買取・下取り額</strong></td>
+                        <td>1着あたり数十円〜数百円（ほぼ値がつかない）</td>
+                        <td class="highlight-col"><span class="highlight-text-accent">確実に10,000円〜最大25,000円分</span>の価値として還元！</td>
+                    </tr>
+                    <tr>
+                        <td><strong>お店の専門性</strong></td>
+                        <td>着物の知識が乏しいアルバイト査定員が多い</td>
+                        <td class="highlight-col"><strong>創業77年</strong>,呉服のプロが大切な着物の価値を理解</td>
+                    </tr>
+                    <tr>
+                        <td><strong>処分の心理</strong></td>
+                        <td>安く買いたたかれて悲しい気持ちになる</td>
+                        <td class="highlight-col">新しいお気に入りを迎えるための<span class="highlight-text-accent">「軍資金」</span>として活かせる</td>
+                    </tr>
+                    <tr>
+                        <td><strong>その後の着物</strong></td>
+                        <td>海外へバルク輸出、または廃棄されることが多い</td>
+                        <td class="highlight-col">プロの技術でリメイク、または適切な方法で次に繋げる</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Instagram Carousel Gallery Section -->
+    <section class="lp-section" id="gallery">
+        <div class="container">
+            <div class="lp-section-title">
+                <h2>カルーセルでキャンペーン内容を確認</h2>
+                <p>左右にスワイプしてご覧いただけます</p>
+            </div>
+            <div class="carousel-strip" aria-label="カルーセル画像一覧" id="carousel-images-strip">
+                <img src="../images/trade-in/01-cover.png" alt="スライド1">
+                <img src="../images/trade-in/02-empathy.png" alt="スライド2">
+                <img src="../images/trade-in/03-pricing.png" alt="スライド3">
+                <img src="../images/trade-in/04-products.png" alt="スライド4">
+                <img src="../images/trade-in/05-eligibility.png" alt="スライド5">
+                <img src="../images/trade-in/06-store-info.png" alt="スライド6">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="lp-section alt-bg" id="faq">
+        <div class="container" style="max-width: 800px;">
+            <div class="lp-section-title">
+                <h2>よくある質問</h2>
+                <p>FAQ</p>
+            </div>
+
+            <details class="faq-details" id="faq-q1">
+                <summary>シミや虫食い、カビがある古い着物でも本当に下取りしてくれますか？</summary>
+                <p>はい、お持ち込みいただくお着物や帯の状態（シミ、カビ、虫食い、シワなど）に関わらず、すべて規定の金額で下取り（値引き）させていただきます。どうぞ安心してお持ちください。</p>
+            </details>
+
+            <details class="faq-details" id="faq-q2">
+                <summary>だるまやで購入したものではない、他店で昔買った着物でも大丈夫ですか？</summary>
+                <p>もちろん大丈夫です。他店様で購入されたお着物や帯、譲り受けたものであっても喜びんで下取りさせていただきます。</p>
+            </details>
+
+            <details class="faq-details" id="faq-q3">
+                <summary>下取り対象外となるものはありますか？</summary>
+                <p>お着物（振袖、訪問着、小紋、紬など。※浴衣は対象外となります）と帯が下取りの対象となります。和装小物類（足袋、肌着、腰紐、帯揚げ、帯締め、草履、バッグなど）や、長襦袢、喪服、浴衣は下取りの対象外となりますのでご了承ください。</p>
+            </details>
+
+            <details class="faq-details" id="faq-q4">
+                <summary>他の割引クーポンやキャンペーンとの併用はできますか？</summary>
+                <p>誠に申し訳ございませんが、他の割引キャンペーンや金券、優待クーポン等との併用はできません。下取り特典単体での適用となります。</p>
+            </details>
+
+            <details class="faq-details" id="faq-q5">
+                <summary>下取りしてもらったお着物を後から返却してもらうことは可能ですか？</summary>
+                <p>下取り手続き完了（ご署名および新しい商品のお会計完了）後は、お品物のご返却・下取りキャンセルは致しかねます。思い出の品で手放すか迷われている場合は、事前にスタッフへご相談ください。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="lp-cta" id="reserve">
+        <div class="container">
+            <p style="font-weight: bold; margin-bottom: 10px; font-size: 1.1rem; color: var(--color-gold-light);">期間限定：6月20日(土) 〜 6月29日(月)</p>
+            <h2>大切な思い出を、新しいワクワクに変える</h2>
+            <p>
+                「タンスを整理したい」「新しいお着物や帯を探したい」とお考えでしたら、ぜひこの特別な機会にだるまやへお越しください。<br>
+                混雑を避けてゆっくりご試着・ご相談いただけるよう、ご来店予約をおすすめしております。
+            </p>
+            <div class="lp-cta-buttons">
+                <a href="tel:06-6692-2239" class="lp-btn lp-btn-white" id="cta-phone-btn">
+                    📞 06-6692-2239
+                </a>
+                <a href="../index.html#contact" class="lp-btn lp-btn-outline" id="cta-web-btn">
+                    Webで来店予約・お問合せ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+        <div class="container">
+            <p>&copy; 2026 だるまや呉服店 All Rights Reserved. ｜ <a href="../index.html" id="footer-home-link">トップページへ戻る</a></p>
+        </div>
+    </footer>
+</body>
+</html>
