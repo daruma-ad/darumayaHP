@@ -961,4 +961,266 @@ a:hover {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+/* ===========================
+   Yukata Sale Specific Styles
+   =========================== */
+.yukata-theme {
+    --color-yukata-navy: #0F2027;
+    --color-yukata-blue: #203A43;
+    --color-yukata-cyan: #2C5364;
+    --color-yukata-gold: #D4AF37;
+    --color-yukata-bg: #F4F7F6;
+    background-color: var(--color-yukata-bg);
+}
+
+.lp-hero.yukata {
+    background-color: var(--color-yukata-navy);
+}
+
+.lp-hero.yukata .lp-hero-bg img {
+    filter: brightness(0.7) contrast(1.05) saturate(1.1);
+}
+
+.lp-hero.yukata .lp-hero-badge.campaign {
+    background: linear-gradient(135deg, #E94E77, #D4AF37);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(233, 78, 119, 0.4);
+}
+
+.lp-hero.yukata .lp-hero-content h1,
+.lp-hero.yukata .lp-hero-content .lp-hero-subtitle {
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.lp-hero.yukata .lp-hero-period {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Instagram Special Promo Box */
+.yukata-instagram-box {
+    background: linear-gradient(135deg, #FFEBEB 0%, #FFF5E6 100%);
+    border: 2px dashed #E94E77;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(233, 78, 119, 0.08);
+}
+
+.yukata-instagram-box::before {
+    content: '🎉 SPECIAL OFFER 🎉';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 6px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 30px;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 10px rgba(220, 39, 67, 0.3);
+}
+
+.yukata-instagram-box h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: #bc1888;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.yukata-instagram-box .highlight-discount {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    color: #dc2743;
+    display: inline-block;
+    margin: 10px 0;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+}
+
+.yukata-instagram-box p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.yukata-instagram-box .ig-action-hint {
+    background: white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #bc1888;
+    border: 1px solid rgba(188, 24, 136, 0.2);
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Yukata Gallery Styles */
+.yukata-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.yukata-gallery-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-base);
+    border: 1px solid #f0ede8;
+}
+
+.yukata-gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.yukata-gallery-img {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+}
+
+.yukata-gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.yukata-gallery-card:hover .yukata-gallery-img img {
+    transform: scale(1.05);
+}
+
+.yukata-gallery-desc {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #f0ede8;
+}
+
+.yukata-gallery-desc p {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-navy);
+    margin: 0;
+}
+
+/* Schedule Section Styles */
+.yukata-schedule-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.yukata-schedule-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #e0f2f1;
+}
+
+.yukata-schedule-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.yukata-schedule-list {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid #f0ede8;
+}
+
+.yukata-schedule-list ul {
+    list-style: none;
+}
+
+.yukata-schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.yukata-schedule-item:last-child {
+    border-bottom: none;
+}
+
+.yukata-event-name {
+    font-weight: 700;
+    color: var(--color-navy);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.yukata-event-name::before {
+    content: '🏮';
+}
+
+.yukata-event-date {
+    font-size: 0.95rem;
+    color: #e53935;
+    background: #ffebee;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+/* Specific Event Highlighting for Gion, Tenjin, etc. */
+.yukata-event-name.major::before {
+    content: '✨';
+}
+.yukata-event-date.major {
+    color: #fff;
+    background: linear-gradient(135deg, #ff9800, #f44336);
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .yukata-gallery-img {
+        height: 380px;
+    }
+    .yukata-schedule-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .yukata-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .yukata-gallery-img {
+        height: 400px;
+    }
+    .yukata-instagram-box {
+        padding: 30px 20px;
+    }
+    .yukata-schedule-list {
+        padding: 20px;
+    }
+}
 
