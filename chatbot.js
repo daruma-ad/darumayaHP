@@ -173,34 +173,40 @@ const FALLBACK_RESPONSES = [
 ];
 
 // ─── DOM要素 ───
-const chatToggle = document.getElementById('chatToggle');
-const chatToggleIcon = document.getElementById('chatToggleIcon');
-const chatBadge = document.getElementById('chatBadge');
-const chatWindow = document.getElementById('chatWindow');
-const chatClose = document.getElementById('chatClose');
-const chatMessages = document.getElementById('chatMessages');
-const chatInput = document.getElementById('chatInput');
-const chatSend = document.getElementById('chatSend');
-const quickActionsEl = document.getElementById('quickActions');
+let chatToggle, chatToggleIcon, chatBadge, chatWindow, chatClose, chatMessages, chatInput, chatSend, quickActionsEl;
 
 let isOpen = false;
 let isFirstOpen = true;
 
 // ─── 初期化 ───
 function init() {
+  chatToggle = document.getElementById('chatToggle');
+  chatToggleIcon = document.getElementById('chatToggleIcon');
+  chatBadge = document.getElementById('chatBadge');
+  chatWindow = document.getElementById('chatWindow');
+  chatClose = document.getElementById('chatClose');
+  chatMessages = document.getElementById('chatMessages');
+  chatInput = document.getElementById('chatInput');
+  chatSend = document.getElementById('chatSend');
+  quickActionsEl = document.getElementById('quickActions');
+
+  if (!chatToggle || !quickActionsEl) return;
+
   renderQuickActions();
   setupEventListeners();
 }
 
 // ─── イベントリスナー ───
 function setupEventListeners() {
-  chatToggle.addEventListener('click', toggleChat);
-  chatClose.addEventListener('click', closeChat);
+  if (chatToggle) chatToggle.addEventListener('click', toggleChat);
+  if (chatClose) chatClose.addEventListener('click', closeChat);
 
-  chatSend.addEventListener('click', handleSend);
-  chatInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') handleSend();
-  });
+  if (chatSend) chatSend.addEventListener('click', handleSend);
+  if (chatInput) {
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleSend();
+    });
+  }
 }
 
 // ─── チャットの開閉 ───
@@ -429,4 +435,8 @@ function getResponse(input) {
 }
 
 // ─── 起動 ───
-init();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
