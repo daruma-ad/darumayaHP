@@ -267,6 +267,22 @@ img {
   border-radius: 2px;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-ghost {
+  color: #fff;
+  background: rgba(38, 6, 8, 0.42);
+}
+
+.button-ghost:hover {
+  color: var(--wine-dark);
+}
+
 .button-gold {
   background: var(--gold-light);
   color: var(--wine-dark);
@@ -399,6 +415,106 @@ img {
   font-size: 1.18rem;
   letter-spacing: 0.1em;
 }
+
+.highlight-reservation-link {
+  display: inline-block;
+  margin-top: 21px;
+  padding-bottom: 3px;
+  color: var(--gold-light);
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.highlight-reservation-link:hover { color: #fff; }
+
+/* ── 特別逸品展予約 ── */
+.reservation {
+  padding: 86px 0;
+  background: linear-gradient(135deg, #f9f0df 0%, #fffdf9 55%, #f1e2c7 100%);
+}
+
+.reservation-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.reservation h2 {
+  margin: 8px 0 18px;
+  color: var(--wine);
+  font: 700 clamp(2rem, 4vw, 3.1rem)/1.42 var(--mincho);
+  letter-spacing: 0.08em;
+}
+
+.reservation-lead {
+  margin: 0;
+  font: 600 1.05rem/1.9 var(--mincho);
+}
+
+.gift-callout {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 24px 0 18px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.gift-icon { font-size: 1.75rem; }
+.gift-callout strong { display: block; color: var(--wine); font-family: var(--mincho); font-size: 1.17rem; letter-spacing: 0.05em; }
+.gift-callout p { margin: 2px 0 0; font-size: 0.82rem; }
+
+.reservation-notes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.84rem;
+  color: #5b4743;
+}
+
+.reservation-notes li { padding: 4px 0 4px 1.2em; }
+.reservation-notes li::before { content: '※'; margin-left: -1.2em; }
+.reservation-phone { margin: 22px 0 0; font-size: 0.9rem; }
+.reservation-phone a { display: inline-block; margin-left: 9px; color: var(--wine); font: 700 1.35rem var(--mincho); text-decoration: none; }
+
+.reservation-form {
+  padding: 34px 36px 28px;
+  border-top: 5px solid var(--gold);
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(77, 13, 17, 0.13);
+}
+
+.reservation-form h3 { margin: 0; color: var(--wine); font: 700 1.55rem var(--mincho); letter-spacing: 0.06em; }
+.form-intro { margin: 3px 0 23px; font-size: 0.82rem; color: #665555; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin: 0 0 17px; padding: 0; border: 0; }
+.form-group label, .form-group legend { display: block; margin: 0 0 6px; color: #463333; font-size: 0.86rem; font-weight: 700; }
+.form-group label span { margin-left: 5px; color: var(--red); font-size: 0.7rem; }
+.form-group input:not([type="checkbox"]), .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 10px 11px;
+  color: var(--ink);
+  border: 1px solid #d9c9b6;
+  border-radius: 2px;
+  background: #fffdf9;
+  font: 16px var(--sans);
+}
+.form-group textarea { resize: vertical; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: 2px solid rgba(214, 175, 91, .55); outline-offset: 1px; border-color: var(--gold); }
+.check-list { display: flex; flex-wrap: wrap; gap: 7px 13px; }
+.check-list label, .agreement { display: inline-flex; align-items: center; gap: 5px; margin: 0; color: #554444; font-size: 0.82rem; font-weight: 400; }
+.check-list input, .agreement input { accent-color: var(--wine); }
+.agreement { align-items: flex-start; margin-bottom: 17px; line-height: 1.5; }
+.agreement input { flex: 0 0 auto; margin-top: 3px; }
+.reservation-submit { width: 100%; padding: 13px 18px; color: var(--wine-dark); border: 0; background: var(--gold-light); cursor: pointer; font: 700 1rem var(--sans); letter-spacing: 0.08em; transition: background .2s, transform .2s; }
+.reservation-submit:hover:not(:disabled) { background: #f8e8b4; transform: translateY(-1px); }
+.reservation-submit:disabled { cursor: wait; opacity: .7; }
+.form-fineprint { margin: 10px 0 0; color: #776663; text-align: center; font-size: 0.73rem; line-height: 1.6; }
+.reservation-status { min-height: 1.8em; margin: 8px 0 0; color: var(--wine); text-align: center; font-size: 0.82rem; font-weight: 700; line-height: 1.6; }
 
 /* ── 【新規】特設企画・案内バナーカード ── */
 .feature-banners {
@@ -831,7 +947,8 @@ footer {
   color: #fff;
 }
 
-.mobile-cta-btn.cta-map {
+.mobile-cta-btn.cta-map,
+.mobile-cta-btn.cta-reservation {
   background: var(--wine);
   color: var(--gold-light);
 }
@@ -932,6 +1049,7 @@ footer {
   }
 
   .highlight,
+  .reservation,
   .schedule,
   .thanks,
   .feature-banners,
@@ -940,6 +1058,7 @@ footer {
   }
 
   .event-grid,
+  .reservation-layout,
   .thanks-inner,
   .visit-map-container {
     grid-template-columns: 1fr;
@@ -948,6 +1067,19 @@ footer {
   .event-card {
     min-height: 0;
     padding: 28px;
+  }
+
+  .reservation-layout {
+    gap: 32px;
+  }
+
+  .reservation-form {
+    padding: 28px 20px 23px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .banner-grid {

@@ -43,6 +43,7 @@
       <nav class="header-nav" aria-label="メインナビゲーション">
         <ul class="header-nav-list">
           <li><a href="#highlight">目玉企画</a></li>
+          <li><a href="#reservation">逸品展予約</a></li>
           <li><a href="#features">特設案内</a></li>
           <li><a href="#schedule">セール期間</a></li>
           <li><a href="#thanks">ご挨拶</a></li>
@@ -72,7 +73,10 @@
           <div><span>最終営業日</span><strong>9月23日（水）</strong></div>
         </div>
         <p class="stock-notice">※商品がなくなり次第終了となります</p>
-        <a href="#highlight" class="button button-gold">最後で最大の売り出しを見る <span aria-hidden="true">↓</span></a>
+        <div class="hero-actions">
+          <a href="#reservation" class="button button-gold">特別逸品展を予約する <span aria-hidden="true">↓</span></a>
+          <a href="#highlight" class="button button-ghost">最後で最大の売り出しを見る</a>
+        </div>
       </div>
     </section>
 
@@ -100,6 +104,82 @@
           </article>
         </div>
         <p class="highlight-closing">だるまや最後の10日間。どうぞお見逃しなく。</p>
+        <a href="#reservation" class="highlight-reservation-link">ご予約で特別逸品展へご案内　季節の和菓子プレゼント <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- 特別逸品展 来店予約 -->
+    <section class="reservation" id="reservation" aria-labelledby="reservation-title">
+      <div class="container reservation-layout">
+        <div class="reservation-intro">
+          <p class="section-label">事前予約特典</p>
+          <h2 id="reservation-title">特別逸品展を<br>ご予約のお客様へ</h2>
+          <p class="reservation-lead">ご予約いただいたお客様を、特別逸品展へご案内いたします。</p>
+          <div class="gift-callout">
+            <span class="gift-icon" aria-hidden="true">🎁</span>
+            <div>
+              <strong>季節の和菓子をプレゼント</strong>
+              <p>感謝を込めて、ご来店時にお渡しします。</p>
+            </div>
+          </div>
+          <ul class="reservation-notes">
+            <li>対象期間：8月27日（木）〜9月6日（日）</li>
+            <li>特典はご予約のうえご来店されたお客様が対象です。</li>
+            <li>和菓子はお一組様一つ、数に限りがございます。</li>
+          </ul>
+          <p class="reservation-phone">お電話でのご予約も承ります。<a href="tel:06-6692-2239">06-6692-2239</a></p>
+        </div>
+
+        <form class="reservation-form" action="https://formspree.io/f/xzdaebvo" method="POST" id="reservation-form">
+          <input type="hidden" name="_subject" value="【特別逸品展】来店予約">
+          <input type="hidden" name="予約特典" value="季節の和菓子プレゼント">
+          <h3>来店予約フォーム</h3>
+          <p class="form-intro">必要事項をご入力のうえ、送信してください。</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reservation-name">お名前 <span>必須</span></label>
+              <input id="reservation-name" name="お名前" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="reservation-phone">電話番号 <span>必須</span></label>
+              <input id="reservation-phone" name="電話番号" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reservation-date">希望来店日 <span>必須</span></label>
+              <input id="reservation-date" name="希望来店日" type="date" min="2026-08-27" max="2026-09-06" required>
+            </div>
+            <div class="form-group">
+              <label for="reservation-time">希望時間帯 <span>必須</span></label>
+              <select id="reservation-time" name="希望時間帯" required>
+                <option value="">選択してください</option>
+                <option>10:00〜12:00</option>
+                <option>12:00〜15:00</option>
+                <option>15:00〜18:00</option>
+                <option>時間は相談したい</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="form-group interest-group">
+            <legend>ご覧になりたいもの（複数選択可）</legend>
+            <div class="check-list">
+              <label><input type="checkbox" name="ご興味のある品" value="着物"> 着物</label>
+              <label><input type="checkbox" name="ご興味のある品" value="帯"> 帯</label>
+              <label><input type="checkbox" name="ご興味のある品" value="反物"> 反物</label>
+              <label><input type="checkbox" name="ご興味のある品" value="和装小物"> 和装小物</label>
+              <label><input type="checkbox" name="ご興味のある品" value="相談したい"> 相談したい</label>
+            </div>
+          </fieldset>
+          <div class="form-group">
+            <label for="reservation-message">ご相談内容・ご要望</label>
+            <textarea id="reservation-message" name="ご相談内容" rows="3" placeholder="お探しの品やご相談内容があればご記入ください"></textarea>
+          </div>
+          <label class="agreement"><input type="checkbox" required> 和菓子特典は数に限りがあることを確認しました。</label>
+          <button type="submit" class="reservation-submit">特別逸品展を予約する</button>
+          <p class="form-fineprint">送信後、店舗からのご連絡をもって予約確定となります。</p>
+          <p id="reservation-status" class="reservation-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -234,6 +314,7 @@
       <ul class="footer-links">
         <li><a href="#top">トップ</a></li>
         <li><a href="#highlight">10日間売り出し</a></li>
+        <li><a href="#reservation">逸品展予約</a></li>
         <li><a href="#features">特設案内</a></li>
         <li><a href="pages/furisode-guide-lp.html">振袖ガイド</a></li>
         <li><a href="pages/campaign-shichigosan.html">七五三・袴案内</a></li>
@@ -249,8 +330,8 @@
       <a href="tel:06-6692-2239" class="mobile-cta-btn cta-tel">
         <span>📞</span> お電話で問い合わせ
       </a>
-      <a href="#access" class="mobile-cta-btn cta-map">
-        <span>📍</span> アクセス・地図
+      <a href="#reservation" class="mobile-cta-btn cta-reservation">
+        <span>🎁</span> 逸品展を予約
       </a>
     </div>
   </div>
@@ -267,6 +348,34 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
         }
       });
+    });
+
+    const reservationForm = document.getElementById('reservation-form');
+    const reservationStatus = document.getElementById('reservation-status');
+
+    reservationForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      const submitButton = reservationForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = '送信しています…';
+      reservationStatus.textContent = '';
+
+      try {
+        const response = await fetch(reservationForm.action, {
+          method: 'POST',
+          body: new FormData(reservationForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Reservation submission failed');
+        reservationForm.reset();
+        reservationStatus.textContent = 'ご予約ありがとうございます。確認後、店舗よりご連絡いたします。';
+      } catch (error) {
+        reservationStatus.textContent = '送信できませんでした。お手数ですが、お電話（06-6692-2239）でご予約ください。';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = '特別逸品展を予約する';
+      }
     });
   </script>
 
